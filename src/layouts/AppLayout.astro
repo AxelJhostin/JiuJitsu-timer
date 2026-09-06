@@ -1,0 +1,45 @@
+---
+import AppHeader from "@/components/app/AppHeader.astro";
+import AppNavigation from "@/components/app/AppNavigation.astro";
+import "@/styles/tokens.css";
+import "@/styles/base.css";
+import "@/styles/components.css";
+import "@/styles/pages.css";
+import "@/styles/scoreboard.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  context?: string;
+  hideNavigation?: boolean;
+}
+
+const {
+  title,
+  description = "Marcador claro y confiable para combates de Brazilian Jiu-Jitsu.",
+  context = "Inicio",
+  hideNavigation = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b1118" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <title>{title} · Tatami Score</title>
+  </head>
+  <body>
+    <AppHeader context={context} />
+    <main class="page-shell">
+      <slot />
+    </main>
+    {!hideNavigation && <AppNavigation />}
+  </body>
+</html>

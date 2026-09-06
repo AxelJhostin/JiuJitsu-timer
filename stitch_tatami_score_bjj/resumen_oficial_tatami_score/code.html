@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0e141b;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#252a32", "on-secondary-container": "#ffaea8", "on-primary": "#002e6a", "on-background": "#dde3ed", "surface-container-lowest": "#090f16", "inverse-on-surface": "#2b3139", "secondary-fixed-dim": "#ffb3ad", "on-secondary-fixed": "#410004", "surface": "#0e141b", "on-surface-variant": "#c2c6d6", "surface-container": "#1a2027", "error-container": "#93000a", "primary": "#adc6ff", "secondary-container": "#a40217", "secondary": "#ffb3ad", "on-tertiary-fixed": "#2a1700", "surface-tint": "#adc6ff", "primary-fixed": "#d8e2ff", "secondary-fixed": "#ffdad7", "inverse-primary": "#005ac2", "surface-dim": "#0e141b", "on-primary-fixed": "#001a42", "tertiary-fixed": "#ffddb8", "background": "#0e141b", "tertiary": "#ffb95f", "primary-container": "#4d8eff", "surface-container-low": "#161c23", "on-primary-container": "#00285d", "surface-bright": "#343a42", "on-secondary-fixed-variant": "#930013", "inverse-surface": "#dde3ed", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "on-surface": "#dde3ed", "on-primary-fixed-variant": "#004395", "surface-container-highest": "#2f353d", "primary-fixed-dim": "#adc6ff", "on-secondary": "#68000a", "surface-variant": "#2f353d", "tertiary-container": "#ca8100", "on-error": "#690005", "on-tertiary": "#472a00", "on-tertiary-container": "#3e2400", "outline": "#8c909f", "tertiary-fixed-dim": "#ffb95f", "outline-variant": "#424754", "error": "#ffb4ab" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "screen-padding": "1.5rem", "gutter-xl": "2rem", "gutter-lg": "1.5rem", "touch-min": "3.5rem", "gutter-md": "1rem", "mat-split": "1.5rem", "gutter-xs": "0.5rem", "touch-lg": "4.5rem", "gutter-sm": "0.75rem" }, fontFamily: { "display-score-mobile": ["Oswald"], "display-score": ["Oswald"], "body-lg": ["Inter"], "headline-md": ["Oswald"], "body-md": ["Inter"], "headline-xl-mobile": ["Oswald"], "label-mono-lg": ["JetBrains Mono"], "label-caps": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Oswald"], "display-clock-mobile": ["JetBrains Mono"], "headline-lg": ["Oswald"], "display-clock": ["JetBrains Mono"], "label-mono-sm": ["JetBrains Mono"] }, fontSize: { "display-score-mobile": ["64px", { "lineHeight": "64px", "letterSpacing": "0em", "fontWeight": "700" }], "display-score": ["128px", { "lineHeight": "120px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-mono-lg": ["20px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-clock-mobile": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "36px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-clock": ["112px", { "lineHeight": "112px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-mono-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 px-gutter-md flex items-center justify-between gap-gutter-sm"><div class="flex items-center gap-gutter-sm min-w-0"><img alt="Tatami Score Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U9u1r-t-H5ykR2T5_P81tnYdJetI4HEONdRqBFFIKgllWSMEeW0PaS3tJWdpf-YvM_6C_JZQNSJFnDnUUrMh9MT8zp1MOsl3tIfvPGxKoulseW-s1_4Okf_iP9VBXBhc8oTPxOkeMoEe5MeB6blEY6fZWt6SttllStY_t9XDWEV3jfP42TtpkMXputhntRjTFDb4I3q1sQdfF2H-aaHNLZgHitFa9mriY3rmtUlmS99m1SY2hIjla9NQM"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-gutter-xs"><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary truncate leading-none">Tatami Score</span><span class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-caps text-label-caps uppercase tracking-wider shrink-0">Copa Andina</span></div><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider truncate">Marcador</span></div></div><div class="flex items-center gap-gutter-xs shrink-0"><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">sports_martial_arts</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<section class="flex flex-col gap-gutter-md px-gutter-md pt-gutter-sm pb-gutter-lg">
+<!-- 1. Header Context Pill Bar / Tatami Status Strip -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-gutter-md py-gutter-xs shadow-sm">
+<div class="flex items-center gap-gutter-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">Tatami 02</span>
+<span class="text-outline text-body-sm font-body-sm">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Oficial IBJJF</span>
+</div>
+<div class="flex items-center gap-gutter-xs bg-surface-container-highest px-gutter-xs py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase">Acta #TA2-048</span>
+</div>
+</div>
+<!-- 2. MatchSummary Hero & Score Split Card -->
+<div class="flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-xl">
+<!-- Match Category Meta Bar -->
+<div class="flex flex-wrap items-center justify-between gap-gutter-xs px-gutter-md py-gutter-xs bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2.5 h-2 rounded bg-primary"></span>
+<span>Adultos • Cinturón Azul</span>
+<span>•</span>
+<span>Medio (-82.3 kg)</span>
+</div>
+<div class="flex items-center gap-2 font-label-mono-sm text-label-mono-sm text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary">GI (KIMONO)</span>
+<span>06:00 MIN</span>
+</div>
+</div>
+<!-- Winner Announcement Banner -->
+<div class="relative bg-gradient-to-r from-tertiary-container/30 via-tertiary-container/10 to-transparent p-gutter-md flex items-center justify-between overflow-hidden">
+<div class="flex items-center gap-gutter-sm min-w-0 z-10">
+<div class="w-12 h-12 rounded-xl bg-tertiary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-on-tertiary text-[28px]" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> Victoria Oficial
+            </span>
+<span class="font-headline-xl-mobile text-headline-xl-mobile uppercase text-on-surface truncate leading-none mt-0.5">Carlos Mendoza</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Alliance BJJ • Bogotá</span>
+</div>
+</div>
+<div class="shrink-0 z-10 flex flex-col items-end">
+<span class="bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase px-2.5 py-1 rounded-full shadow-sm">Puntos</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary mt-1">+2 Dif</span>
+</div>
+<div class="absolute -right-4 -bottom-6 opacity-10 text-on-surface pointer-events-none">
+<span class="material-symbols-outlined text-[110px]" style="font-variation-settings: 'FILL' 1;">sports_kabaddi</span>
+</div>
+</div>
+<!-- Athletic Scoreboard Split Horizon -->
+<div class="grid grid-cols-2 bg-surface-container-lowest p-gutter-sm gap-gutter-xs">
+<!-- Blue Fighter Score (Winner) -->
+<div class="relative flex flex-col p-gutter-sm rounded-lg bg-surface-container-low overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Esquina Azul</span>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<span class="font-headline-md text-headline-md uppercase text-on-surface truncate">Mendoza</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate -mt-1 mb-2">Alliance BJJ</span>
+<div class="flex items-baseline justify-between mt-auto">
+<span class="font-display-score-mobile text-display-score-mobile text-primary tracking-tight">6</span>
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-1 bg-tertiary/15 px-2 py-0.5 rounded">
+<span class="font-label-caps text-label-caps text-tertiary uppercase">Ventajas</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold">1</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Penas</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Red Fighter Score -->
+<div class="relative flex flex-col p-gutter-sm rounded-lg bg-surface-container-low overflow-hidden opacity-90">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-wider">Esquina Roja</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">2° Lugar</span>
+</div>
+<span class="font-headline-md text-headline-md uppercase text-on-surface truncate">Rivera</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate -mt-1 mb-2">Gracie Humaitá</span>
+<div class="flex items-baseline justify-between mt-auto">
+<span class="font-display-score-mobile text-display-score-mobile text-secondary tracking-tight">4</span>
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Ventajas</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">0</span>
+</div>
+<div class="flex items-center gap-1 bg-error-container/40 px-2 py-0.5 rounded">
+<span class="font-label-caps text-label-caps text-error uppercase">Penas</span>
+<span class="font-label-mono-sm text-label-mono-sm text-error font-bold">1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-3 divide-x divide-outline-variant/20 bg-surface-container-high py-2 text-center">
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Efectividad</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">75% Sweep</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Ritmo de Ataque</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-bold">1 cada 1:12m</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Faltas Tatami</span>
+<span class="font-label-mono-sm text-label-mono-sm text-error font-bold">1 Penalidad</span>
+</div>
+</div>
+</div>
+<!-- Match Visual Highlights Banner with Placeholder Image -->
+<div class="relative w-full h-32 rounded-xl overflow-hidden shadow-lg bg-surface-container-low flex items-end">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Two Brazilian Jiu-Jitsu athletes competing intensely on blue and red tatami mats inside an athletic arena with harsh gym overhead lights, high drama atmosphere in dark moody palette with subtle blue and crimson edge highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcujqaZI99lcftrdOG7isBypH4nF9rRwb0Bjk0EpLIlL2Wa81G0Mtsu1GnDzURuU6MhBldti9N679cRNx2Mf1OxQTYU-HZtIssOzzQkpYa6P-Tb3ZCM1_5dI5PI44lt2LeM03jAj1A51NrVfY4cavnjxL9WpUOSulOyNRwf5k6VyrkZ-jpZopykNAz0pSah_mctyRn9Da7N-tfFDSpbsoi5HgeJjC9GGxhlzw932J1BgvxFFe3AUdM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+<div class="relative z-10 w-full p-gutter-sm flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">photo_camera</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface">Foto Oficial de Tatami</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Final Mat #2 • 14:38h</span>
+</div>
+</div>
+<!-- 3. ActionLog Timeline Component -->
+<div class="flex flex-col bg-surface-container rounded-xl p-gutter-md shadow-md gap-gutter-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">timeline</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">Registro Cronológico de Acciones</h3>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">6 Eventos</span>
+</div>
+<!-- Timeline Items List -->
+<div class="relative flex flex-col gap-gutter-sm pt-2">
+<!-- Vertical guide stroke simulated via absolute bar -->
+<div class="absolute left-6 top-3 bottom-4 w-0.5 bg-surface-container-highest"></div>
+<!-- Event 1 -->
+<div class="relative flex items-center gap-gutter-sm z-10">
+<div class="w-12 shrink-0 text-center font-label-mono-sm text-label-mono-sm text-primary font-bold bg-surface-container-lowest py-1 rounded">
+            04:15
+          </div>
+<div class="flex flex-1 items-center justify-between p-gutter-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Carlos Mendoza</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Derribo (Takedown)</span>
+</div>
+</div>
+<span class="bg-primary/20 text-primary font-headline-md text-headline-md px-2 py-0.5 rounded leading-none shrink-0">+2</span>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative flex items-center gap-gutter-sm z-10">
+<div class="w-12 shrink-0 text-center font-label-mono-sm text-label-mono-sm text-secondary font-bold bg-surface-container-lowest py-1 rounded">
+            03:02
+          </div>
+<div class="flex flex-1 items-center justify-between p-gutter-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Mateo Rivera</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Barrido (Sweep)</span>
+</div>
+</div>
+<span class="bg-secondary/20 text-secondary font-headline-md text-headline-md px-2 py-0.5 rounded leading-none shrink-0">+2</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative flex items-center gap-gutter-sm z-10">
+<div class="w-12 shrink-0 text-center font-label-mono-sm text-label-mono-sm text-tertiary font-bold bg-surface-container-lowest py-1 rounded">
+            02:18
+          </div>
+<div class="flex flex-1 items-center justify-between p-gutter-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Carlos Mendoza</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Intento de Pase (Guard Pass)</span>
+</div>
+</div>
+<span class="bg-tertiary-container/40 text-tertiary font-label-caps text-label-caps uppercase px-2 py-1 rounded font-bold shrink-0">+1 Ventaja</span>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="relative flex items-center gap-gutter-sm z-10">
+<div class="w-12 shrink-0 text-center font-label-mono-sm text-label-mono-sm text-secondary font-bold bg-surface-container-lowest py-1 rounded">
+            01:45
+          </div>
+<div class="flex flex-1 items-center justify-between p-gutter-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Mateo Rivera</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Rodilla en abdomen (Knee on belly)</span>
+</div>
+</div>
+<span class="bg-secondary/20 text-secondary font-headline-md text-headline-md px-2 py-0.5 rounded leading-none shrink-0">+2</span>
+</div>
+</div>
+<!-- Event 5 -->
+<div class="relative flex items-center gap-gutter-sm z-10">
+<div class="w-12 shrink-0 text-center font-label-mono-sm text-label-mono-sm text-primary font-bold bg-surface-container-lowest py-1 rounded">
+            00:52
+          </div>
+<div class="flex flex-1 items-center justify-between p-gutter-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Carlos Mendoza</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Derribo decisivo (Double Leg)</span>
+</div>
+</div>
+<span class="bg-primary/20 text-primary font-headline-md text-headline-md px-2 py-0.5 rounded leading-none shrink-0">+2</span>
+</div>
+</div>
+<!-- Event 6 (Match Final) -->
+<div class="relative flex items-center gap-gutter-sm z-10">
+<div class="w-12 shrink-0 text-center font-label-mono-sm text-label-mono-sm text-on-surface font-bold bg-surface-container-highest py-1 rounded">
+            00:00
+          </div>
+<div class="flex flex-1 items-center justify-between p-gutter-xs bg-surface-container-highest rounded-lg">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0" style="font-variation-settings: 'FILL' 1;">sports_score</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Fin del Combate</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Decisión Oficial Árbitro Central</span>
+</div>
+</div>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface-variant font-label-mono-sm text-label-mono-sm shrink-0">06:00 TOT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Official Match Validation Signatures / Arbiter info -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl p-gutter-sm">
+<div class="flex items-center gap-gutter-xs">
+<div class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-[18px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface">Árbitro Central</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prof. Rodrigo Silva (CBJJ #1492)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-1 rounded">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold">Validado</span>
+</div>
+</div>
+<!-- 4. Action Buttons Footer & Confirmation Modal Trigger -->
+<div class="flex flex-col gap-gutter-sm mt-gutter-xs">
+<!-- Primary Big Action Button -->
+<button class="w-full h-touch-min bg-primary text-on-primary rounded-xl flex items-center justify-center gap-gutter-xs font-headline-md text-headline-md uppercase tracking-wider shadow-lg active:scale-[0.99] transition-transform" id="btn-next-match">
+<span class="material-symbols-outlined text-[24px]">play_circle</span>
+<span>Nuevo Combate (Siguiente Llave)</span>
+</button>
+<!-- Secondary Utility Actions Row -->
+<div class="grid grid-cols-3 gap-gutter-xs">
+<button class="flex flex-col items-center justify-center p-gutter-sm bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-bright active:scale-[0.98] transition-colors gap-1" id="btn-export">
+<span class="material-symbols-outlined text-[20px] text-primary">description</span>
+<span class="font-label-caps text-label-caps uppercase text-center">Exportar Acta</span>
+</button>
+<button class="flex flex-col items-center justify-center p-gutter-sm bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-bright active:scale-[0.98] transition-colors gap-1" id="btn-cast">
+<span class="material-symbols-outlined text-[20px] text-tertiary">tv</span>
+<span class="font-label-caps text-label-caps uppercase text-center">Proyección</span>
+</button>
+<button class="flex flex-col items-center justify-center p-gutter-sm bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-bright active:scale-[0.98] transition-colors gap-1" id="btn-history">
+<span class="material-symbols-outlined text-[20px] text-secondary">history</span>
+<span class="font-label-caps text-label-caps uppercase text-center">Ver Historial</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Modal: Confirmation for Next Match -->
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-gutter-md bg-surface-container-lowest/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200" id="confirmation-modal">
+<div class="w-full max-w-sm bg-surface-container rounded-xl p-gutter-md shadow-2xl flex flex-col gap-gutter-md transform translate-y-4 transition-transform duration-200" id="modal-card">
+<div class="flex items-center gap-gutter-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">flag</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface">¿Cerrar y Avanzar?</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">El marcador actual se registrará permanentemente en el servidor del torneo.</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-gutter-xs flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Próximo en Tatami 2:</span>
+<span class="font-bold text-on-surface">Llave Semifinal B #49</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter-xs">
+<button class="h-11 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase hover:bg-surface-bright transition-colors" id="btn-modal-cancel">
+          Revisar Datos
+        </button>
+<button class="h-11 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase font-bold tracking-wider hover:bg-primary-fixed transition-colors" id="btn-modal-confirm">
+          Confirmar
+        </button>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      const nextBtn = document.getElementById('btn-next-match');
+      const modal = document.getElementById('confirmation-modal');
+      const modalCard = document.getElementById('modal-card');
+      const cancelBtn = document.getElementById('btn-modal-cancel');
+      const confirmBtn = document.getElementById('btn-modal-confirm');
+      const exportBtn = document.getElementById('btn-export');
+
+      function openModal() {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modalCard.classList.remove('translate-y-4');
+      }
+
+      function closeModal() {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modalCard.classList.add('translate-y-4');
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', openModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', function() {
+          confirmBtn.innerText = 'CARGANDO...';
+          setTimeout(function() {
+            closeModal();
+            confirmBtn.innerText = 'CONFIRMAR';
+          }, 600);
+        });
+      }
+
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function() {
+          const original = exportBtn.innerHTML;
+          exportBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] text-tertiary animate-spin">sync</span><span class="font-label-caps text-label-caps uppercase text-tertiary">Exportado</span>';
+          setTimeout(function() {
+            exportBtn.innerHTML = original;
+          }, 1500);
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-caps text-label-caps">Inicio</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-primary font-bold" data-path="marcador" href="#"><span class="material-symbols-outlined text-[22px]">timer</span><span class="font-label-caps text-label-caps">Marcador</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="historial" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-label-caps text-label-caps">Historial</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="proyeccion" href="#"><span class="material-symbols-outlined text-[22px]">tv</span><span class="font-label-caps text-label-caps">Proyección</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="reglas" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caps text-label-caps">Reglas</span></a></div></nav></body></html>

@@ -1,0 +1,72 @@
+---
+import AppLayout from "@/layouts/AppLayout.astro";
+---
+
+<AppLayout title="Reglamento" context="Reglas">
+  <header class="page-intro">
+    <p class="eyebrow">Perfil activo · versión 2024.1</p>
+    <h1 class="page-heading">IBJJF estándar</h1>
+    <p>
+      El marcador registra las decisiones del árbitro y aplica el orden de
+      desempate.
+    </p>
+  </header>
+
+  <section class="rules-page-grid">
+    <article class="panel rules-panel">
+      <h2>Puntuación oficial</h2>
+      <div class="rules-score-list">
+        <div><span>Derribo</span><strong>+2</strong></div>
+        <div><span>Barrido</span><strong>+2</strong></div>
+        <div><span>Rodilla en abdomen</span><strong>+2</strong></div>
+        <div><span>Pase de guardia</span><strong>+3</strong></div>
+        <div><span>Montada</span><strong>+4</strong></div>
+        <div><span>Control de espalda</span><strong>+4</strong></div>
+      </div>
+    </article>
+
+    <article class="panel rules-panel">
+      <h2>Desempate</h2>
+      <ol class="rules-order">
+        <li>
+          <span>1</span><div>
+            <strong>Puntos</strong><p>Gana la puntuación total más alta.</p>
+          </div>
+        </li>
+        <li>
+          <span>2</span><div>
+            <strong>Ventajas</strong><p>
+              Se comparan cuando los puntos empatan.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>3</span><div>
+            <strong>Penalizaciones</strong><p>Gana quien tenga menos faltas.</p>
+          </div>
+        </li>
+        <li>
+          <span>4</span><div>
+            <strong>Decisión arbitral</strong><p>
+              El árbitro decide si todo permanece igual.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </article>
+
+    <article class="panel rules-panel rules-panel--wide">
+      <h2>Escalamiento de penalizaciones</h2>
+      <div class="penalty-steps">
+        <div><b>1ª</b><span>Penalización registrada</span></div>
+        <div><b>2ª</b><span>Ventaja para el oponente</span></div>
+        <div><b>3ª</b><span>2 puntos para el oponente</span></div>
+        <div><b>4ª</b><span>Descalificación</span></div>
+      </div>
+      <p class="rules-disclaimer">
+        Tatami Score es una herramienta de registro. La validez de una técnica,
+        una falta grave o una decisión final siempre corresponde al árbitro.
+      </p>
+    </article>
+  </section>
+</AppLayout>

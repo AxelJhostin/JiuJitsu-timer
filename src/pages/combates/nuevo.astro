@@ -1,0 +1,13 @@
+---
+import { MatchSetupForm } from "@/components/match/MatchSetupForm";
+import AppLayout from "@/layouts/AppLayout.astro";
+---
+
+<AppLayout title="Preparar combate" context="Nuevo combate">
+  <header class="page-intro">
+    <p class="eyebrow">Pista oficial</p>
+    <h1 class="page-heading">Preparar combate</h1>
+    <p>Configura la mesa y verifica los datos antes de iniciar el reloj.</p>
+  </header>
+  <MatchSetupForm client:load />
+</AppLayout>

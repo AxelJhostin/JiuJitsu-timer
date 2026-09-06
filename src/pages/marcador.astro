@@ -1,0 +1,8 @@
+---
+import { MatchController } from "@/components/match/MatchController";
+import AppLayout from "@/layouts/AppLayout.astro";
+---
+
+<AppLayout title="Marcador en vivo" context="Marcador">
+  <MatchController client:load />
+</AppLayout>

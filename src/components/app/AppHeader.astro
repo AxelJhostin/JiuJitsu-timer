@@ -1,0 +1,16 @@
+---
+import Brand from "./Brand.astro";
+
+interface Props {
+  context?: string;
+}
+
+const { context = "Inicio" } = Astro.props;
+---
+
+<header class="app-header">
+  <div class="app-header__inner">
+    <Brand context={context} />
+    <span class="event-badge">Copa Andina</span>
+  </div>
+</header>

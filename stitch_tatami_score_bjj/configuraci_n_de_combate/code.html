@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0e141b;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#252a32", "on-secondary-container": "#ffaea8", "on-primary": "#002e6a", "on-background": "#dde3ed", "surface-container-lowest": "#090f16", "inverse-on-surface": "#2b3139", "secondary-fixed-dim": "#ffb3ad", "on-secondary-fixed": "#410004", "surface": "#0e141b", "on-surface-variant": "#c2c6d6", "surface-container": "#1a2027", "error-container": "#93000a", "primary": "#adc6ff", "secondary-container": "#a40217", "secondary": "#ffb3ad", "on-tertiary-fixed": "#2a1700", "surface-tint": "#adc6ff", "primary-fixed": "#d8e2ff", "secondary-fixed": "#ffdad7", "inverse-primary": "#005ac2", "surface-dim": "#0e141b", "on-primary-fixed": "#001a42", "tertiary-fixed": "#ffddb8", "background": "#0e141b", "tertiary": "#ffb95f", "primary-container": "#4d8eff", "surface-container-low": "#161c23", "on-primary-container": "#00285d", "surface-bright": "#343a42", "on-secondary-fixed-variant": "#930013", "inverse-surface": "#dde3ed", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "on-surface": "#dde3ed", "on-primary-fixed-variant": "#004395", "surface-container-highest": "#2f353d", "primary-fixed-dim": "#adc6ff", "on-secondary": "#68000a", "surface-variant": "#2f353d", "tertiary-container": "#ca8100", "on-error": "#690005", "on-tertiary": "#472a00", "on-tertiary-container": "#3e2400", "outline": "#8c909f", "tertiary-fixed-dim": "#ffb95f", "outline-variant": "#424754", "error": "#ffb4ab" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "screen-padding": "1.5rem", "gutter-xl": "2rem", "gutter-lg": "1.5rem", "touch-min": "3.5rem", "gutter-md": "1rem", "mat-split": "1.5rem", "gutter-xs": "0.5rem", "touch-lg": "4.5rem", "gutter-sm": "0.75rem" }, fontFamily: { "display-score-mobile": ["Oswald"], "display-score": ["Oswald"], "body-lg": ["Inter"], "headline-md": ["Oswald"], "body-md": ["Inter"], "headline-xl-mobile": ["Oswald"], "label-mono-lg": ["JetBrains Mono"], "label-caps": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Oswald"], "display-clock-mobile": ["JetBrains Mono"], "headline-lg": ["Oswald"], "display-clock": ["JetBrains Mono"], "label-mono-sm": ["JetBrains Mono"] }, fontSize: { "display-score-mobile": ["64px", { "lineHeight": "64px", "letterSpacing": "0em", "fontWeight": "700" }], "display-score": ["128px", { "lineHeight": "120px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-mono-lg": ["20px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-clock-mobile": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "36px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-clock": ["112px", { "lineHeight": "112px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-mono-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 px-gutter-md flex items-center justify-between gap-gutter-sm"><div class="flex items-center gap-gutter-sm min-w-0"><img alt="Tatami Score Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U9u1r-t-H5ykR2T5_P81tnYdJetI4HEONdRqBFFIKgllWSMEeW0PaS3tJWdpf-YvM_6C_JZQNSJFnDnUUrMh9MT8zp1MOsl3tIfvPGxKoulseW-s1_4Okf_iP9VBXBhc8oTPxOkeMoEe5MeB6blEY6fZWt6SttllStY_t9XDWEV3jfP42TtpkMXputhntRjTFDb4I3q1sQdfF2H-aaHNLZgHitFa9mriY3rmtUlmS99m1SY2hIjla9NQM"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-gutter-xs"><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary truncate leading-none">Tatami Score</span><span class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-caps text-label-caps uppercase tracking-wider shrink-0">Copa Andina</span></div><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider truncate">Inicio</span></div></div><div class="flex items-center gap-gutter-xs shrink-0"><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">sports_martial_arts</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Subheader Status Banner -->
+<div class="px-screen-padding pt-4 pb-3 flex items-center justify-between">
+<div class="flex items-center gap-gutter-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_12px_rgba(173,198,255,0.8)]"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md tracking-wide uppercase text-on-surface">Preparar Combate</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Copa Andina de Jiu-Jitsu • Pista Oficial</span>
+</div>
+</div>
+<div class="px-3 py-1 rounded bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm font-bold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">sports_kabaddi</span>
+<span>TATAMI 2</span>
+</div>
+</div>
+<div class="px-screen-padding flex flex-col gap-5">
+<!-- Miniatura Live Matchup Preview Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-3 shadow-xl">
+<div class="flex items-center justify-between pb-2 mb-2 bg-surface-container-high/40 px-3 py-1.5 rounded">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">preview</span>
+          Previsualización en Pantalla Mat
+        </span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold" id="preview-mode-tag">GI • ADULTO</span>
+</div>
+<!-- Split Stage Canvas -->
+<div class="grid grid-cols-2 gap-2 relative">
+<!-- Center Timer Overlay Pill -->
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center bg-surface-container-highest/95 backdrop-blur-md px-3 py-1 rounded shadow-lg">
+<span class="font-label-caps text-[9px] uppercase tracking-wider text-on-surface-variant">TIEMPO</span>
+<span class="font-display-clock-mobile text-[22px] leading-tight text-on-surface font-bold tracking-tight" id="preview-timer">06:00</span>
+</div>
+<!-- Blue Preview Side -->
+<div class="relative rounded-lg bg-surface-container p-3 flex flex-col justify-between overflow-hidden shadow-sm">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="pl-2">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider font-bold">AZUL</span>
+</div>
+<h4 class="font-headline-md text-[18px] leading-tight uppercase text-on-surface truncate mt-0.5" id="preview-blue-name">Carlos Mendoza</h4>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase truncate block" id="preview-blue-academy">Alliance BJJ</span>
+</div>
+<div class="mt-3 pl-2 flex items-baseline justify-between">
+<span class="font-display-score-mobile text-[28px] leading-none text-primary font-bold">0</span>
+<div class="flex gap-1.5 font-label-mono-sm text-[10px] text-on-surface-variant">
+<span>ADV: <strong class="text-tertiary">0</strong></span>
+<span>PEN: <strong class="text-error">0</strong></span>
+</div>
+</div>
+</div>
+<!-- Red Preview Side -->
+<div class="relative rounded-lg bg-surface-container p-3 flex flex-col justify-between overflow-hidden shadow-sm">
+<div class="absolute top-0 right-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="pr-2 text-right">
+<div class="flex items-center justify-end gap-1">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider font-bold">ROJO</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<h4 class="font-headline-md text-[18px] leading-tight uppercase text-on-surface truncate mt-0.5" id="preview-red-name">Mateo Rivera</h4>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase truncate block" id="preview-red-academy">Gracie Barra</span>
+</div>
+<div class="mt-3 pr-2 flex items-baseline justify-between flex-row-reverse">
+<span class="font-display-score-mobile text-[28px] leading-none text-secondary font-bold">0</span>
+<div class="flex gap-1.5 font-label-mono-sm text-[10px] text-on-surface-variant flex-row-reverse">
+<span>ADV: <strong class="text-tertiary">0</strong></span>
+<span>PEN: <strong class="text-error">0</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Competitors Inputs Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">Atletas en Tatami</span>
+<button class="flex items-center gap-1 font-label-caps text-label-caps uppercase text-primary hover:text-on-surface transition-colors py-1 px-2 rounded bg-surface-container-high/60" id="swap-fighters-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+          Invertir esquinas
+        </button>
+</div>
+<!-- Fighter 1 / Blue Corner Card -->
+<div class="rounded-xl bg-surface-container p-4 flex flex-col gap-3 shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-primary-container"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-primary-container text-on-primary-container font-headline-md text-[13px] font-bold">1</span>
+<span class="font-headline-md text-[15px] uppercase tracking-wider text-primary font-bold">Esquina Azul</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps uppercase tracking-wider font-semibold">Cinturón Azul</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1 font-semibold" for="blue-name">Nombre del Competidor</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">person</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary placeholder-on-surface-variant/40" id="blue-name" placeholder="Nombre completo" type="text" value="Carlos Mendoza"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1 font-semibold" for="blue-academy">Academia / Equipo</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">shield</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary placeholder-on-surface-variant/40" id="blue-academy" placeholder="Nombre de filial o academia" type="text" value="Alliance BJJ"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Fighter 2 / Red Corner Card -->
+<div class="rounded-xl bg-surface-container p-4 flex flex-col gap-3 shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1.5 h-full bg-secondary"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-secondary-container text-on-secondary-container font-headline-md text-[13px] font-bold">2</span>
+<span class="font-headline-md text-[15px] uppercase tracking-wider text-secondary font-bold">Esquina Roja</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-semibold">Cinturón Azul</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1 font-semibold" for="red-name">Nombre del Competidor</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">person</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary placeholder-on-surface-variant/40" id="red-name" placeholder="Nombre completo" type="text" value="Mateo Rivera"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1 font-semibold" for="red-academy">Academia / Equipo</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">shield</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary placeholder-on-surface-variant/40" id="red-academy" placeholder="Nombre de filial o academia" type="text" value="Gracie Barra"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category & Match Parameters Card -->
+<div class="rounded-xl bg-surface-container p-4 flex flex-col gap-4 shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">Datos del Torneo y División</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps font-bold uppercase">Categoría Oficial</span>
+</div>
+<!-- Tournament Title Field -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1 font-semibold" for="tournament-name">Torneo</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">emoji_events</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="tournament-name" placeholder="Torneo" type="text" value="Copa Andina de Jiu-Jitsu"/>
+</div>
+</div>
+<!-- Division & Weight Selection -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1 font-semibold" for="division-name">División y Peso</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">fitness_center</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="division-name" placeholder="División" type="text" value="Adultos — Azul — Medio (-82.3 kg)"/>
+</div>
+</div>
+<!-- Modality Toggle (Gi / No-Gi) -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1.5 font-semibold">Modalidad de Vestimenta</label>
+<div class="grid grid-cols-2 p-1 rounded-xl bg-surface-container-lowest gap-1">
+<button class="modality-btn active flex items-center justify-center gap-2 py-2.5 rounded-lg bg-primary text-on-primary font-headline-md text-[14px] uppercase tracking-wider font-bold transition-all shadow-md" id="toggle-gi" type="button">
+<span class="material-symbols-outlined text-[18px]">dry_cleaning</span>
+<span>Gi (Kimono)</span>
+</button>
+<button class="modality-btn flex items-center justify-center gap-2 py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface font-headline-md text-[14px] uppercase tracking-wider font-bold transition-all" id="toggle-nogi" type="button">
+<span class="material-symbols-outlined text-[18px]">sports_martial_arts</span>
+<span>No-Gi (Grappling)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Match Duration Tactical Selector -->
+<div class="rounded-xl bg-surface-container p-4 flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">Duración del Round</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold" id="selected-duration-badge">06:00 MIN</span>
+</div>
+<!-- Quick Chips Grid -->
+<div class="grid grid-cols-3 gap-2" id="duration-chips">
+<button class="duration-chip h-12 flex flex-col items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface font-headline-md text-[15px] uppercase active:scale-95 transition-all" data-time="03:00" type="button">
+<span class="leading-none">3 MIN</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Infantil</span>
+</button>
+<button class="duration-chip h-12 flex flex-col items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface font-headline-md text-[15px] uppercase active:scale-95 transition-all" data-time="05:00" type="button">
+<span class="leading-none">5 MIN</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Blanco</span>
+</button>
+<button class="duration-chip active h-12 flex flex-col items-center justify-center rounded-lg bg-surface-container-high text-primary font-headline-md text-[15px] uppercase shadow-[0_0_16px_rgba(77,142,255,0.4)] transition-all" data-time="06:00" type="button">
+<span class="leading-none font-bold">6 MIN</span>
+<span class="font-label-caps text-[9px] text-primary uppercase mt-0.5">Azul Adulto</span>
+</button>
+<button class="duration-chip h-12 flex flex-col items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface font-headline-md text-[15px] uppercase active:scale-95 transition-all" data-time="08:00" type="button">
+<span class="leading-none">8 MIN</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Morado</span>
+</button>
+<button class="duration-chip h-12 flex flex-col items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface font-headline-md text-[15px] uppercase active:scale-95 transition-all" data-time="10:00" type="button">
+<span class="leading-none">10 MIN</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Negra</span>
+</button>
+<button class="duration-chip h-12 flex flex-col items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-headline-md text-[13px] uppercase active:scale-95 transition-all" data-time="custom" id="custom-time-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span>
+<span class="font-label-caps text-[9px] uppercase mt-0.5">Ajuste</span>
+</button>
+</div>
+</div>
+<!-- Rule Set Selection Card -->
+<div class="rounded-xl bg-surface-container p-4 flex flex-col gap-3 shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">Reglamento Aplicado</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-caps text-label-caps font-bold uppercase">Oficial</span>
+</div>
+<!-- Main Selected IBJJF Card -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest flex items-start gap-3 shadow-inner">
+<div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-md text-[16px] uppercase tracking-wide text-on-surface">IBJJF Estándar</span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Activo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Puntos (+2 raspada/derribo, +3 pase guardia, +4 montada/espalda), ventajas doradas y penalizaciones escalonadas según el reglamento federativo oficial.
+          </p>
+</div>
+</div>
+<!-- Secondary Rule Trigger -->
+<button class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-high/50 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" id="advanced-rules-trigger" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">tune</span>
+<span class="font-label-caps text-label-caps uppercase font-semibold">Personalizar reglas avanzadas</span>
+</div>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Pre-Fight Check Checklist / Delight Feature -->
+<div class="rounded-xl bg-surface-container-low p-4 flex flex-col gap-2.5">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">Verificación Rápida de Mesa</span>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container/60 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary bg-surface-container-lowest focus:ring-0" type="checkbox"/>
+<span class="font-label-caps text-[10px] uppercase font-bold text-on-surface">Pesaje Aprobado</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container/60 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary bg-surface-container-lowest focus:ring-0" type="checkbox"/>
+<span class="font-label-caps text-[10px] uppercase font-bold text-on-surface">Faja Correcta</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Bottom Persistent Fixed Action Bar -->
+<div class="fixed bottom-16 left-0 w-full z-40 px-screen-padding py-3 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.7)] flex items-center gap-3">
+<!-- Secondary Back Action -->
+<button class="h-14 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-md text-[14px] uppercase tracking-wider flex items-center justify-center gap-1.5 shrink-0 transition-transform active:scale-95 shadow-sm" id="btn-cancel" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver</span>
+</button>
+<!-- Primary Launch Combat Button -->
+<button class="flex-1 h-14 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-md text-headline-md tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(77,142,255,0.45)] transition-all active:scale-[0.98]" id="btn-start-match" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Iniciar Combate</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    // Competitor inputs live update into preview
+    const blueNameInput = document.getElementById('blue-name');
+    const redNameInput = document.getElementById('red-name');
+    const blueAcadInput = document.getElementById('blue-academy');
+    const redAcadInput = document.getElementById('red-academy');
+
+    const previewBlueName = document.getElementById('preview-blue-name');
+    const previewRedName = document.getElementById('preview-red-name');
+    const previewBlueAcad = document.getElementById('preview-blue-academy');
+    const previewRedAcad = document.getElementById('preview-red-academy');
+
+    if (blueNameInput && previewBlueName) {
+      blueNameInput.addEventListener('input', (e) => {
+        previewBlueName.textContent = e.target.value.trim() || 'ATLETA AZUL';
+      });
+    }
+
+    if (redNameInput && previewRedName) {
+      redNameInput.addEventListener('input', (e) => {
+        previewRedName.textContent = e.target.value.trim() || 'ATLETA ROJO';
+      });
+    }
+
+    if (blueAcadInput && previewBlueAcad) {
+      blueAcadInput.addEventListener('input', (e) => {
+        previewBlueAcad.textContent = e.target.value.trim() || 'ACADEMIA AZUL';
+      });
+    }
+
+    if (redAcadInput && previewRedAcad) {
+      redAcadInput.addEventListener('input', (e) => {
+        previewRedAcad.textContent = e.target.value.trim() || 'ACADEMIA ROJA';
+      });
+    }
+
+    // Swap Fighters Trigger
+    const swapBtn = document.getElementById('swap-fighters-btn');
+    if (swapBtn) {
+      swapBtn.addEventListener('click', () => {
+        const bName = blueNameInput.value;
+        const bAcad = blueAcadInput.value;
+        blueNameInput.value = redNameInput.value;
+        blueAcadInput.value = redAcadInput.value;
+        redNameInput.value = bName;
+        redAcadInput.value = bAcad;
+
+        // dispatch input
+        blueNameInput.dispatchEvent(new Event('input'));
+        redNameInput.dispatchEvent(new Event('input'));
+        blueAcadInput.dispatchEvent(new Event('input'));
+        redAcadInput.dispatchEvent(new Event('input'));
+      });
+    }
+
+    // Modality Toggles (Gi vs No-Gi)
+    const toggleGi = document.getElementById('toggle-gi');
+    const toggleNogi = document.getElementById('toggle-nogi');
+    const previewModeTag = document.getElementById('preview-mode-tag');
+
+    if (toggleGi && toggleNogi && previewModeTag) {
+      toggleGi.addEventListener('click', () => {
+        toggleGi.classList.add('bg-primary', 'text-on-primary', 'shadow-md');
+        toggleGi.classList.remove('text-on-surface-variant');
+        toggleNogi.classList.remove('bg-primary', 'text-on-primary', 'shadow-md');
+        toggleNogi.classList.add('text-on-surface-variant');
+        previewModeTag.textContent = 'GI • ADULTO';
+      });
+
+      toggleNogi.addEventListener('click', () => {
+        toggleNogi.classList.add('bg-primary', 'text-on-primary', 'shadow-md');
+        toggleNogi.classList.remove('text-on-surface-variant');
+        toggleGi.classList.remove('bg-primary', 'text-on-primary', 'shadow-md');
+        toggleGi.classList.add('text-on-surface-variant');
+        previewModeTag.textContent = 'NO-GI • ADULTO';
+      });
+    }
+
+    // Duration Chips Selector
+    const chips = document.querySelectorAll('.duration-chip');
+    const timerPreview = document.getElementById('preview-timer');
+    const durationBadge = document.getElementById('selected-duration-badge');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const time = chip.getAttribute('data-time');
+        if (time === 'custom') {
+          const userTime = prompt('Ingrese tiempo en formato MM:SS', '07:00');
+          if (userTime && userTime.includes(':')) {
+            chips.forEach(c => c.classList.remove('bg-surface-container-high', 'text-primary', 'shadow-[0_0_16px_rgba(77,142,255,0.4)]', 'font-bold'));
+            chip.classList.add('bg-surface-container-high', 'text-primary', 'shadow-[0_0_16px_rgba(77,142,255,0.4)]', 'font-bold');
+            if (timerPreview) timerPreview.textContent = userTime;
+            if (durationBadge) durationBadge.textContent = userTime + ' MIN';
+          }
+          return;
+        }
+
+        chips.forEach(c => {
+          c.classList.remove('bg-surface-container-high', 'text-primary', 'shadow-[0_0_16px_rgba(77,142,255,0.4)]', 'font-bold');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        chip.classList.add('bg-surface-container-high', 'text-primary', 'shadow-[0_0_16px_rgba(77,142,255,0.4)]', 'font-bold');
+
+        if (timerPreview) timerPreview.textContent = time;
+        if (durationBadge) durationBadge.textContent = time + ' MIN';
+      });
+    });
+
+    // Launch Match Button
+    const startMatchBtn = document.getElementById('btn-start-match');
+    if (startMatchBtn) {
+      startMatchBtn.addEventListener('click', () => {
+        startMatchBtn.classList.add('scale-95');
+        setTimeout(() => {
+          startMatchBtn.classList.remove('scale-95');
+          const scoreboardNavLink = document.querySelector('a[data-path="marcador"]');
+          if (scoreboardNavLink) {
+            scoreboardNavLink.click();
+          }
+        }, 150);
+      });
+    }
+
+    // Cancel Button
+    const cancelBtn = document.getElementById('btn-cancel');
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', () => {
+        const homeNavLink = document.querySelector('a[data-path="inicio"]');
+        if (homeNavLink) {
+          homeNavLink.click();
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-primary font-bold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-caps text-label-caps">Inicio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="marcador" href="#"><span class="material-symbols-outlined text-[22px]">timer</span><span class="font-label-caps text-label-caps">Marcador</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="historial" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-label-caps text-label-caps">Historial</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="proyeccion" href="#"><span class="material-symbols-outlined text-[22px]">tv</span><span class="font-label-caps text-label-caps">Proyección</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="reglas" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caps text-label-caps">Reglas</span></a></div></nav></body></html>

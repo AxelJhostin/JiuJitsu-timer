@@ -1,0 +1,16 @@
+---
+import { MatchHistory } from "@/components/history/MatchHistory";
+import AppLayout from "@/layouts/AppLayout.astro";
+---
+
+<AppLayout title="Historial" context="Historial">
+  <header class="page-intro page-intro--split">
+    <div>
+      <p class="eyebrow">Registro de mesa</p>
+      <h1 class="page-heading">Historial de combates</h1>
+      <p>Consulta resultados guardados en el dispositivo y en Neon.</p>
+    </div>
+    <a class="button button--primary" href="/combates/nuevo">Nuevo combate</a>
+  </header>
+  <MatchHistory client:load />
+</AppLayout>

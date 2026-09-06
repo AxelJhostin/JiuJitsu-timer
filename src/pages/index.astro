@@ -1,0 +1,8 @@
+---
+import { HomeDashboard } from "@/components/dashboard/HomeDashboard";
+import AppLayout from "@/layouts/AppLayout.astro";
+---
+
+<AppLayout title="Inicio" context="Inicio">
+  <HomeDashboard client:load />
+</AppLayout>

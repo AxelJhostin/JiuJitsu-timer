@@ -1,0 +1,31 @@
+---
+interface Props {
+  name: "home" | "timer" | "history" | "screen" | "rules";
+}
+
+const { name } = Astro.props;
+const paths: Record<Props["name"], string[]> = {
+  home: ["M3 11.5 12 4l9 7.5", "M5 10.5V20h14v-9.5", "M9 20v-6h6v6"],
+  timer: ["M9 2h6", "M12 14v-4", "M8 4h8", "M12 6a8 8 0 1 0 8 8"],
+  history: ["M3 12a9 9 0 1 0 3-6.7L3 8", "M3 3v5h5", "M12 7v5l3 2"],
+  screen: ["M3 5h18v12H3z", "M8 21h8", "M12 17v4"],
+  rules: [
+    "M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z",
+    "M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z",
+  ],
+};
+---
+
+<svg
+  aria-hidden="true"
+  width="22"
+  height="22"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  {paths[name].map((path) => <path d={path} />)}
+</svg>

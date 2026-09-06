@@ -1,0 +1,15 @@
+---
+interface Props {
+  context?: string;
+}
+
+const { context = "Inicio" } = Astro.props;
+---
+
+<a class="brand" href="/" aria-label="Tatami Score, inicio">
+  <img class="brand__logo" src="/logo.svg" alt="" width="38" height="38" />
+  <span class="brand__copy">
+    <span class="brand__name">Tatami Score</span>
+    <span class="brand__context">{context}</span>
+  </span>
+</a>

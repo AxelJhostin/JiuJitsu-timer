@@ -1,0 +1,36 @@
+---
+import NavIcon from "./NavIcon.astro";
+
+const pathname = Astro.url.pathname;
+const items = [
+  { href: "/", label: "Inicio", icon: "home" },
+  { href: "/marcador", label: "Marcador", icon: "timer" },
+  { href: "/historial", label: "Historial", icon: "history" },
+  { href: "/proyeccion", label: "Proyección", icon: "screen" },
+  { href: "/reglas", label: "Reglas", icon: "rules" },
+] as const;
+---
+
+<nav class="app-nav" aria-label="Navegación principal">
+  <div class="app-nav__inner">
+    {
+      items.map((item) => {
+        const active =
+          item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+        return (
+          <a
+            class="app-nav__item"
+            href={item.href}
+            aria-current={active ? "page" : undefined}
+          >
+            <span class="sr-only">{item.label}</span>
+            <span style="display:grid;place-items:center;gap:3px">
+              <NavIcon name={item.icon} />
+              <span aria-hidden="true">{item.label}</span>
+            </span>
+          </a>
+        );
+      })
+    }
+  </div>
+</nav>

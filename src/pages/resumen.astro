@@ -1,0 +1,8 @@
+---
+import { MatchSummary } from "@/components/match/MatchSummary";
+import AppLayout from "@/layouts/AppLayout.astro";
+---
+
+<AppLayout title="Resumen oficial" context="Resultado">
+  <MatchSummary client:load />
+</AppLayout>

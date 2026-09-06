@@ -1,0 +1,72 @@
+# Producto y alcance
+
+## Problema
+
+Los marcadores físicos y muchas aplicaciones de BJJ son difíciles de operar,
+tienen poca jerarquía visual o mezclan puntuación con administración de torneos.
+Tatami Score se concentra en el momento crítico: registrar un combate sin perder
+atención del tatami.
+
+## Usuarios
+
+- Operador de mesa o árbitro: controla tiempo y puntuación.
+- Organizador: configura el combate y consulta resultados.
+- Espectador: observa el modo de proyección.
+
+## Propuesta de valor
+
+Un marcador claro, táctil y confiable que funciona en un teléfono, una tablet o
+una pantalla grande, con historial persistente y reglas desacopladas.
+
+## Alcance del primer producto
+
+### Incluido
+
+- Inicio con acceso al combate actual y al último resultado.
+- Configuración de competidores, academia, torneo, categoría, modalidad y tiempo.
+- Puntuación IBJJF: +2, +3, +4, ventaja y penalización.
+- Registro de la técnica concreta asociada a cada puntuación.
+- Cronómetro con iniciar, pausar, reanudar y finalizar.
+- Historial reversible de acciones.
+- Final por puntos, sumisión, descalificación, abandono, lesión o decisión arbitral.
+- Resumen y cronología del combate.
+- Historial de combates.
+- Modo de proyección sin controles operativos.
+- Persistencia local y sincronización con Neon cuando esté configurado.
+
+### Fuera del primer alcance
+
+- Registro de atletas o academias como entidades maestras.
+- Fotografías, documentos o datos biométricos.
+- Inscripciones y pagos.
+- Brackets completos y avance automático de llaves.
+- Streaming de video.
+- Autenticación multiusuario y permisos por torneo.
+- Sincronización en tiempo real entre varios dispositivos.
+
+## Flujo principal
+
+```text
+Inicio → Preparar combate → Marcador en vivo → Finalizar → Resumen → Historial
+                                ↓
+                         Modo proyección
+```
+
+## Regla de ganador por tiempo
+
+1. Mayor puntuación.
+2. Si empatan, más ventajas.
+3. Si empatan, menos penalizaciones.
+4. Si continúa el empate, decisión del árbitro.
+
+La sumisión, la descalificación y otros finales explícitos tienen prioridad sobre
+el cálculo automático.
+
+## Criterios de experiencia
+
+- Una acción de puntuación común debe requerir como máximo dos toques.
+- El operador siempre debe saber si el reloj está activo o pausado.
+- Deshacer debe revertir exactamente la última acción.
+- No se permite puntuar un combate finalizado.
+- El modo de proyección nunca debe exponer controles de edición.
+- La interfaz debe seguir siendo legible al 200 % de zoom.
