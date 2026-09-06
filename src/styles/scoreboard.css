@@ -975,7 +975,7 @@
   }
   .summary-actions {
     grid-column: 1 / -1;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr repeat(3, auto);
   }
   .official-result__banner {
     grid-template-columns: auto 1fr auto;

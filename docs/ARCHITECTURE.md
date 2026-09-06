@@ -82,7 +82,8 @@ adaptador sin cambiar los componentes.
 | Ruta                | Propósito                            |
 | ------------------- | ------------------------------------ |
 | `/`                 | Inicio y acceso rápido.              |
-| `/combates/nuevo`   | Configuración.                       |
+| `/combates/nuevo`   | Configuración completa.              |
+| `/combates/rapido`  | Nombres y duración únicamente.       |
 | `/marcador`         | Operación del combate activo.        |
 | `/resumen`          | Último resultado.                    |
 | `/historial`        | Resultados guardados.                |

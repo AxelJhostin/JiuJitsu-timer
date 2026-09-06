@@ -23,6 +23,7 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 ### Incluido
 
 - Inicio con acceso al combate actual y al último resultado.
+- Combate rápido solicitando únicamente nombres y duración.
 - Configuración de competidores, academia, torneo, categoría, modalidad y tiempo.
 - Puntuación IBJJF: +2, +3, +4, ventaja y penalización.
 - Registro de la técnica concreta asociada a cada puntuación.
@@ -47,9 +48,10 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 ## Flujo principal
 
 ```text
-Inicio → Preparar combate → Marcador en vivo → Finalizar → Resumen → Historial
-                                ↓
-                         Modo proyección
+Inicio ─┬→ Combate rápido ────────┐
+        └→ Preparar combate ──────┴→ Marcador en vivo → Finalizar → Resumen
+                                          ↓                         ↓
+                                   Modo proyección              Historial
 ```
 
 ## Regla de ganador por tiempo

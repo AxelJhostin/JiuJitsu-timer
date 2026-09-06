@@ -113,6 +113,9 @@ export function MatchSummary() {
         <a className="button" href="/proyeccion">
           <Monitor aria-hidden="true" /> Proyección
         </a>
+        <a className="button" href="/combates/rapido">
+          Combate rápido
+        </a>
         <a className="button" href="/historial">
           Ver historial
         </a>

@@ -10,13 +10,14 @@ Stitch.
 Tatami Score está en construcción. El objetivo del primer hito es entregar un
 flujo completo y usable:
 
-1. Preparar un combate.
-2. Iniciar y controlar el cronómetro.
-3. Registrar puntos, ventajas y penalizaciones.
-4. Deshacer acciones.
-5. Finalizar el combate y determinar el resultado.
-6. Consultar el resumen y el historial.
-7. Mostrar una vista pública de proyección.
+1. Preparar un combate completo.
+2. Iniciar un combate rápido indicando solo nombres y duración.
+3. Iniciar y controlar el cronómetro.
+4. Registrar puntos, ventajas y penalizaciones.
+5. Deshacer acciones.
+6. Finalizar el combate y determinar el resultado.
+7. Consultar el resumen y el historial.
+8. Mostrar una vista pública de proyección.
 
 Los archivos originales exportados por Stitch permanecen en
 `stitch_tatami_score_bjj/` como referencia de diseño. El código de producción

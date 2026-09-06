@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Clock3, Monitor, Plus, Trophy } from "lucide-react";
+import { ArrowRight, Clock3, Monitor, Plus, Trophy, Zap } from "lucide-react";
 import { finishMethodLabels, type MatchState } from "@/domain/match";
 import { loadActiveMatch, loadMatchHistory } from "@/lib/storage";
 
@@ -36,6 +36,14 @@ export function HomeDashboard() {
           <span>
             <strong>Nuevo combate</strong>
             <small>Listo para iniciar reloj</small>
+          </span>
+          <ArrowRight aria-hidden="true" />
+        </a>
+        <a className="button home-quick-cta" href="/combates/rapido">
+          <Zap aria-hidden="true" />
+          <span>
+            <strong>Combate rápido</strong>
+            <small>Solo nombres y tiempo</small>
           </span>
           <ArrowRight aria-hidden="true" />
         </a>
