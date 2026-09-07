@@ -28,6 +28,9 @@ export const matchModeEnum = pgEnum("match_mode", ["gi", "no-gi"]);
 export const cornerEnum = pgEnum("corner", ["blue", "red"]);
 
 export const eventKindEnum = pgEnum("event_kind", [
+  "points_2",
+  "points_3",
+  "points_4",
   "takedown",
   "sweep",
   "knee_on_belly",

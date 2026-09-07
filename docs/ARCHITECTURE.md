@@ -81,6 +81,10 @@ crean instantáneas locales después de cada cambio y se persiste al servidor en
 puntos seguros. Una futura sincronización en tiempo real podrá reemplazar el
 adaptador sin cambiar los componentes.
 
+Los botones de puntuación directa crean eventos genéricos (`Puntos +2`, `+3` o
+`+4`). Si el operador dispone de tiempo, puede etiquetar el último evento con
+una técnica compatible sin alterar su puntaje ni la cronología.
+
 ## Rutas
 
 | Ruta                | Propósito                            |

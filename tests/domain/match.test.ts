@@ -44,6 +44,23 @@ describe("dominio del combate", () => {
     assert.equal(state.blueScore.points, 9);
   });
 
+  it("registra puntos directos y permite etiquetarlos sin alterar el marcador", () => {
+    let state = matchReducer(match(), {
+      type: "ADD_SCORE",
+      corner: "blue",
+      kind: "points_2",
+      eventId: "22222222-2222-4222-8222-222222222222",
+    });
+    state = matchReducer(state, {
+      type: "TAG_EVENT",
+      eventId: "22222222-2222-4222-8222-222222222222",
+      kind: "sweep",
+    });
+
+    assert.equal(state.blueScore.points, 2);
+    assert.equal(state.events[0].label, "Barrido");
+  });
+
   it("escala la segunda y tercera penalización según IBJJF", () => {
     let state = match();
     for (let count = 0; count < 3; count += 1) {

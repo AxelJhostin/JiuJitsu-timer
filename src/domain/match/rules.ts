@@ -3,6 +3,7 @@ import type {
   MatchEvent,
   MatchScore,
   ScoringActionKind,
+  TechniqueActionKind,
 } from "./types";
 
 export interface ScoringDefinition {
@@ -11,6 +12,12 @@ export interface ScoringDefinition {
   shortLabel: string;
   points: number;
 }
+
+export const QUICK_SCORE_ACTIONS = [
+  { kind: "points_2", label: "Puntos +2", shortLabel: "+2", points: 2 },
+  { kind: "points_3", label: "Puntos +3", shortLabel: "+3", points: 3 },
+  { kind: "points_4", label: "Puntos +4", shortLabel: "+4", points: 4 },
+] satisfies ScoringDefinition[];
 
 export const IBJJF_RULESET = {
   id: "ibjjf-standard",
@@ -66,7 +73,7 @@ export function oppositeCorner(corner: Corner): Corner {
 export function getScoringDefinition(
   kind: ScoringActionKind,
 ): ScoringDefinition {
-  const definition = IBJJF_RULESET.actions.find(
+  const definition = [...QUICK_SCORE_ACTIONS, ...IBJJF_RULESET.actions].find(
     (action) => action.kind === kind,
   );
 
@@ -78,6 +85,7 @@ export function getScoringDefinition(
 }
 
 export function buildMatchEvent(input: {
+  id?: string;
   sequence: number;
   corner: Corner;
   kind: ScoringActionKind;
@@ -90,7 +98,7 @@ export function buildMatchEvent(input: {
   const isPenalty = input.kind === "penalty";
 
   return {
-    id: crypto.randomUUID(),
+    id: input.id ?? crypto.randomUUID(),
     sequence: input.sequence,
     corner: input.corner,
     kind: input.kind,
@@ -103,6 +111,15 @@ export function buildMatchEvent(input: {
     remainingSeconds: input.remainingSeconds,
     createdAt: input.createdAt,
   };
+}
+
+export function tagMatchEvent(
+  event: MatchEvent,
+  kind: TechniqueActionKind,
+): MatchEvent {
+  const definition = getScoringDefinition(kind);
+  if (event.points !== definition.points) return event;
+  return { ...event, kind, label: definition.label };
 }
 
 export function scoresFromEvents(events: MatchEvent[]): {

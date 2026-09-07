@@ -3,6 +3,7 @@ import {
   compareScores,
   emptyScore,
   scoresFromEvents,
+  tagMatchEvent,
 } from "./rules";
 import type { MatchCommand, MatchConfig, MatchState } from "./types";
 
@@ -61,6 +62,7 @@ export function matchReducer(
         sequence: state.events.length + 1,
         corner: command.corner,
         kind: command.kind,
+        id: command.eventId,
         currentPenaltyCount: currentScore.penalties,
         remainingSeconds: state.remainingSeconds,
         createdAt: command.at ?? new Date().toISOString(),
@@ -73,6 +75,16 @@ export function matchReducer(
         blueScore: scores.blue,
         redScore: scores.red,
       };
+    }
+
+    case "TAG_EVENT": {
+      if (state.status === "finished") return state;
+      const events = state.events.map((event) =>
+        event.id === command.eventId
+          ? tagMatchEvent(event, command.kind)
+          : event,
+      );
+      return { ...state, events };
     }
 
     case "UNDO_LAST": {

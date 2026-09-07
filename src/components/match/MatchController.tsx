@@ -10,6 +10,7 @@ import {
   type MatchResult,
   type MatchState,
   type ScoringActionKind,
+  type TechniqueActionKind,
 } from "@/domain/match";
 import {
   archiveMatch,
@@ -27,6 +28,11 @@ export function MatchController() {
   const [match, setMatch] = React.useState<MatchState | null>(null);
   const [loaded, setLoaded] = React.useState(false);
   const [actionCorner, setActionCorner] = React.useState<Corner | null>(null);
+  const [tagTarget, setTagTarget] = React.useState<{
+    eventId: string;
+    corner: Corner;
+    points: number;
+  } | null>(null);
   const [finishOpen, setFinishOpen] = React.useState(false);
   const [disqualifiedCorner, setDisqualifiedCorner] =
     React.useState<Corner | null>(null);
@@ -119,7 +125,19 @@ export function MatchController() {
 
   const addScore = (corner: Corner, kind: ScoringActionKind) => {
     if (!match) return;
-    send({ type: "ADD_SCORE", corner, kind });
+    const eventId = crypto.randomUUID();
+    send({ type: "ADD_SCORE", corner, kind, eventId });
+    const directPoints =
+      kind === "points_2"
+        ? 2
+        : kind === "points_3"
+          ? 3
+          : kind === "points_4"
+            ? 4
+            : 0;
+    setTagTarget(
+      directPoints ? { eventId, corner, points: directPoints } : null,
+    );
     if (kind === "penalty") {
       const current = corner === "blue" ? match.blueScore : match.redScore;
       if (
@@ -132,6 +150,12 @@ export function MatchController() {
         setFinishOpen(true);
       }
     }
+  };
+
+  const tagScore = (eventId: string, kind: TechniqueActionKind) => {
+    send({ type: "TAG_EVENT", eventId, kind });
+    setTagTarget(null);
+    setActionCorner(null);
   };
 
   const toggleTimer = () => {
@@ -220,6 +244,25 @@ export function MatchController() {
         </strong>
       </div>
 
+      {tagTarget && (
+        <div className="technique-prompt" aria-live="polite">
+          <span>+{tagTarget.points} registrado</span>
+          <button
+            type="button"
+            onClick={() => setActionCorner(tagTarget.corner)}
+          >
+            Etiquetar técnica (opcional)
+          </button>
+          <button
+            type="button"
+            aria-label="Omitir etiqueta técnica"
+            onClick={() => setTagTarget(null)}
+          >
+            Ahora no
+          </button>
+        </div>
+      )}
+
       <div className="fighters-grid">
         {(["blue", "red"] as Corner[]).map((corner) => (
           <CompetitorScoreCard
@@ -229,7 +272,10 @@ export function MatchController() {
             score={corner === "blue" ? match.blueScore : match.redScore}
             disabled={disabled}
             onScore={(kind) => addScore(corner, kind)}
-            onOpenActions={() => setActionCorner(corner)}
+            onOpenActions={() => {
+              setTagTarget(null);
+              setActionCorner(corner);
+            }}
           />
         ))}
       </div>
@@ -279,6 +325,8 @@ export function MatchController() {
             addScore(corner, kind);
             setActionCorner(null);
           }}
+          tagTarget={tagTarget ?? undefined}
+          onTag={tagScore}
         />
       )}
 

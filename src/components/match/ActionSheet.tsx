@@ -7,13 +7,22 @@ import {
   type Corner,
   type MatchState,
   type ScoringActionKind,
+  type TechniqueActionKind,
 } from "@/domain/match";
+
+interface TagTarget {
+  eventId: string;
+  corner: Corner;
+  points: number;
+}
 
 interface ActionSheetProps {
   match: MatchState;
   initialCorner: Corner;
   onClose: () => void;
   onConfirm: (corner: Corner, kind: ScoringActionKind) => void;
+  tagTarget?: TagTarget;
+  onTag?: (eventId: string, kind: TechniqueActionKind) => void;
 }
 
 export function ActionSheet({
@@ -21,9 +30,19 @@ export function ActionSheet({
   initialCorner,
   onClose,
   onConfirm,
+  tagTarget,
+  onTag,
 }: ActionSheetProps) {
-  const [corner, setCorner] = React.useState<Corner>(initialCorner);
-  const [kind, setKind] = React.useState<ScoringActionKind>("takedown");
+  const isTagging = Boolean(tagTarget);
+  const actions = isTagging
+    ? IBJJF_RULESET.actions.filter(
+        (action) => action.points === tagTarget?.points,
+      )
+    : IBJJF_RULESET.actions;
+  const [corner, setCorner] = React.useState<Corner>(
+    tagTarget?.corner ?? initialCorner,
+  );
+  const [kind, setKind] = React.useState<ScoringActionKind>(actions[0].kind);
   const definition = getScoringDefinition(kind);
 
   return (
@@ -38,7 +57,9 @@ export function ActionSheet({
         <header className="dialog-header">
           <div>
             <p className="eyebrow">Reglamento oficial IBJJF</p>
-            <h2 id="action-sheet-title">Registrar acción</h2>
+            <h2 id="action-sheet-title">
+              {isTagging ? "Etiquetar técnica" : "Registrar acción"}
+            </h2>
           </div>
           <button
             className="icon-button"
@@ -50,22 +71,29 @@ export function ActionSheet({
           </button>
         </header>
 
-        <div className="corner-selector" aria-label="Seleccionar competidor">
-          {(["blue", "red"] as Corner[]).map((value) => (
-            <button
-              type="button"
-              key={value}
-              className={`corner-selector__option corner-selector__option--${value}`}
-              aria-pressed={corner === value}
-              onClick={() => setCorner(value)}
-            >
-              {cornerLabel(value)} · {match[value].name}
-            </button>
-          ))}
-        </div>
+        {isTagging ? (
+          <p className="technique-sheet-note">
+            +{tagTarget?.points} para {match[corner].name}. Esta etiqueta es
+            opcional y no modifica el puntaje.
+          </p>
+        ) : (
+          <div className="corner-selector" aria-label="Seleccionar competidor">
+            {(["blue", "red"] as Corner[]).map((value) => (
+              <button
+                type="button"
+                key={value}
+                className={`corner-selector__option corner-selector__option--${value}`}
+                aria-pressed={corner === value}
+                onClick={() => setCorner(value)}
+              >
+                {cornerLabel(value)} · {match[value].name}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="action-grid">
-          {IBJJF_RULESET.actions.map((action) => (
+          {actions.map((action) => (
             <button
               type="button"
               key={action.kind}
@@ -78,7 +106,7 @@ export function ActionSheet({
                 {action.kind === "advantage"
                   ? "+V"
                   : action.kind === "penalty"
-                    ? "+P"
+                    ? "!"
                     : `+${action.points}`}
               </strong>
             </button>
@@ -88,10 +116,16 @@ export function ActionSheet({
         <button
           className="button button--primary button--wide action-confirm"
           type="button"
-          onClick={() => onConfirm(corner, kind)}
+          onClick={() => {
+            if (tagTarget && onTag) {
+              onTag(tagTarget.eventId, kind as TechniqueActionKind);
+            } else {
+              onConfirm(corner, kind);
+            }
+          }}
         >
           <Check aria-hidden="true" />
-          Confirmar {definition.label}
+          {isTagging ? "Guardar" : "Confirmar"} {definition.label}
         </button>
       </section>
     </div>

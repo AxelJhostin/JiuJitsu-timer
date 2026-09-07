@@ -21,11 +21,11 @@ const quickActions: Array<{
   value: string;
   label: string;
 }> = [
-  { kind: "sweep", value: "+2", label: "Barrido" },
-  { kind: "guard_pass", value: "+3", label: "Pase" },
-  { kind: "mount", value: "+4", label: "Montada" },
+  { kind: "points_2", value: "+2", label: "Puntos" },
+  { kind: "points_3", value: "+3", label: "Puntos" },
+  { kind: "points_4", value: "+4", label: "Puntos" },
   { kind: "advantage", value: "+V", label: "Ventaja" },
-  { kind: "penalty", value: "+P", label: "Falta" },
+  { kind: "penalty", value: "!", label: "Falta" },
 ];
 
 export function CompetitorScoreCard({

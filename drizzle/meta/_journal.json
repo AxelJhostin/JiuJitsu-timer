@@ -8,6 +8,13 @@
       "when": 1788704572908,
       "tag": "0000_flowery_red_wolf",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788785672097,
+      "tag": "0001_magenta_karma",
+      "breakpoints": true
     }
   ]
 }

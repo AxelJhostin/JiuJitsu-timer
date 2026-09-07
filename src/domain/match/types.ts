@@ -5,6 +5,9 @@ export type MatchStatus = "ready" | "running" | "paused" | "finished";
 export type MatchMode = "gi" | "no-gi";
 
 export type ScoringActionKind =
+  | "points_2"
+  | "points_3"
+  | "points_4"
   | "takedown"
   | "sweep"
   | "knee_on_belly"
@@ -13,6 +16,11 @@ export type ScoringActionKind =
   | "back_control"
   | "advantage"
   | "penalty";
+
+export type TechniqueActionKind = Exclude<
+  ScoringActionKind,
+  "points_2" | "points_3" | "points_4" | "advantage" | "penalty"
+>;
 
 export type FinishMethod =
   | "points"
@@ -91,6 +99,8 @@ export type MatchCommand =
       corner: Corner;
       kind: ScoringActionKind;
       at?: string;
+      eventId?: string;
     }
+  | { type: "TAG_EVENT"; eventId: string; kind: TechniqueActionKind }
   | { type: "UNDO_LAST" }
   | { type: "FINISH"; result: MatchResult; at?: string };

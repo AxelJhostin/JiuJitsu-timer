@@ -43,6 +43,9 @@ export const matchStateSchema = z.object({
       sequence: z.number().int().positive(),
       corner: z.enum(["blue", "red"]),
       kind: z.enum([
+        "points_2",
+        "points_3",
+        "points_4",
         "takedown",
         "sweep",
         "knee_on_belly",
