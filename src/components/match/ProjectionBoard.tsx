@@ -1,5 +1,5 @@
 import React from "react";
-import { Maximize, Radio } from "lucide-react";
+import { Home, Maximize, Radio } from "lucide-react";
 import { formatClock, type Corner, type MatchState } from "@/domain/match";
 import { loadActiveMatch } from "@/lib/storage";
 
@@ -27,6 +27,9 @@ export function ProjectionBoard() {
         <img src="/logo.svg" width="88" height="88" alt="" />
         <h1>Esperando combate</h1>
         <p>Prepara un combate desde la mesa para activar esta pantalla.</p>
+        <a className="button button--primary" href="/">
+          <Home aria-hidden="true" /> Volver al inicio
+        </a>
       </section>
     );
   }
@@ -49,14 +52,20 @@ export function ProjectionBoard() {
               ? "Finalizado"
               : "Pausado"}
         </span>
-        <button
-          className="icon-button"
-          type="button"
-          onClick={enterFullscreen}
-          aria-label="Pantalla completa"
-        >
-          <Maximize aria-hidden="true" />
-        </button>
+        <div className="projection-header__actions">
+          <a className="projection-home-link" href="/">
+            <Home aria-hidden="true" />
+            <span>Inicio</span>
+          </a>
+          <button
+            className="icon-button"
+            type="button"
+            onClick={enterFullscreen}
+            aria-label="Pantalla completa"
+          >
+            <Maximize aria-hidden="true" />
+          </button>
+        </div>
       </header>
 
       <section className="projection-clock">

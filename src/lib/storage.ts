@@ -2,6 +2,8 @@ import { matchStateSchema, type MatchState } from "@/domain/match";
 
 export const ACTIVE_MATCH_KEY = "tatami-score:active-match";
 export const MATCH_HISTORY_KEY = "tatami-score:match-history";
+const TECHNIQUE_PROMPT_DISMISSED_PREFIX =
+  "tatami-score:technique-prompt-dismissed:";
 
 function canUseStorage(): boolean {
   return typeof window !== "undefined" && Boolean(window.localStorage);
@@ -53,6 +55,23 @@ export function archiveMatch(match: MatchState): void {
     JSON.stringify([match, ...history].slice(0, 100)),
   );
   saveActiveMatch(match);
+}
+
+export function isTechniquePromptDismissed(matchId: string): boolean {
+  if (!canUseStorage()) return false;
+  return (
+    window.localStorage.getItem(
+      `${TECHNIQUE_PROMPT_DISMISSED_PREFIX}${matchId}`,
+    ) === "true"
+  );
+}
+
+export function dismissTechniquePrompt(matchId: string): void {
+  if (!canUseStorage()) return;
+  window.localStorage.setItem(
+    `${TECHNIQUE_PROMPT_DISMISSED_PREFIX}${matchId}`,
+    "true",
+  );
 }
 
 export async function syncMatch(match: MatchState): Promise<boolean> {

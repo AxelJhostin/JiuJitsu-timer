@@ -14,6 +14,8 @@ import {
 } from "@/domain/match";
 import {
   archiveMatch,
+  dismissTechniquePrompt,
+  isTechniquePromptDismissed,
   loadActiveMatch,
   saveActiveMatch,
   syncMatch,
@@ -33,6 +35,8 @@ export function MatchController() {
     corner: Corner;
     points: number;
   } | null>(null);
+  const [techniqueSuggestionsMuted, setTechniqueSuggestionsMuted] =
+    React.useState(false);
   const [finishOpen, setFinishOpen] = React.useState(false);
   const [disqualifiedCorner, setDisqualifiedCorner] =
     React.useState<Corner | null>(null);
@@ -43,7 +47,11 @@ export function MatchController() {
   const lastFeedbackSecond = React.useRef<number | null>(null);
 
   React.useEffect(() => {
-    setMatch(loadActiveMatch());
+    const activeMatch = loadActiveMatch();
+    setMatch(activeMatch);
+    setTechniqueSuggestionsMuted(
+      activeMatch ? isTechniquePromptDismissed(activeMatch.id) : false,
+    );
     setLoaded(true);
   }, []);
 
@@ -136,7 +144,9 @@ export function MatchController() {
             ? 4
             : 0;
     setTagTarget(
-      directPoints ? { eventId, corner, points: directPoints } : null,
+      directPoints && !techniqueSuggestionsMuted
+        ? { eventId, corner, points: directPoints }
+        : null,
     );
     if (kind === "penalty") {
       const current = corner === "blue" ? match.blueScore : match.redScore;
@@ -156,6 +166,13 @@ export function MatchController() {
     send({ type: "TAG_EVENT", eventId, kind });
     setTagTarget(null);
     setActionCorner(null);
+  };
+
+  const muteTechniqueSuggestions = () => {
+    if (!match) return;
+    dismissTechniquePrompt(match.id);
+    setTechniqueSuggestionsMuted(true);
+    setTagTarget(null);
   };
 
   const toggleTimer = () => {
@@ -256,7 +273,7 @@ export function MatchController() {
           <button
             type="button"
             aria-label="Omitir etiqueta técnica"
-            onClick={() => setTagTarget(null)}
+            onClick={muteTechniqueSuggestions}
           >
             Ahora no
           </button>

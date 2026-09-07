@@ -83,7 +83,9 @@ adaptador sin cambiar los componentes.
 
 Los botones de puntuación directa crean eventos genéricos (`Puntos +2`, `+3` o
 `+4`). Si el operador dispone de tiempo, puede etiquetar el último evento con
-una técnica compatible sin alterar su puntaje ni la cronología.
+una técnica compatible sin alterar su puntaje ni la cronología. La sugerencia
+se puede silenciar por combate y esa preferencia queda guardada localmente con
+el identificador del combate.
 
 ## Rutas
 

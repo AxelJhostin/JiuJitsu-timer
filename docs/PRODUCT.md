@@ -27,7 +27,8 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 - Configuración de competidores, academia, torneo, categoría, modalidad y tiempo.
 - Puntuación IBJJF: +2, +3, +4, ventaja y penalización.
 - Puntuación directa en un toque (+2, +3 o +4); la técnica concreta se puede
-  etiquetar después de forma opcional, sin interrumpir la mesa.
+  etiquetar después de forma opcional, sin interrumpir la mesa ni volver a
+  sugerirse si el operador la descarta para ese combate.
 - Cronómetro con iniciar, pausar, reanudar y finalizar.
 - Historial reversible de acciones.
 - Final por puntos, sumisión, descalificación, abandono, lesión o decisión arbitral.
