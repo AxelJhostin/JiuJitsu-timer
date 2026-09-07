@@ -52,3 +52,13 @@ Por ello se usa `@astrojs/vercel` en lugar de `@astrojs/node`: Vercel requiere
 que esas rutas se empaqueten como funciones de su plataforma. El adaptador de
 Node standalone queda reservado para una futura publicación en infraestructura
 propia.
+
+## ADR-008: Registro de atletas y Academy Rating
+
+**Estado:** planificada.
+
+La próxima expansión interna separará las fichas de atletas de sus futuras
+cuentas de acceso. El ranking será auditado por combate, filtrable por cinta y
+modalidad, y ponderará una victoria según la diferencia de cinta. No habrá bonus
+por método de victoria. La especificación completa está en
+[Atletas y ranking interno](ATHLETES_AND_RANKING.md).

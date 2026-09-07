@@ -152,6 +152,7 @@ incluyen en el cliente.
 - [Sistema de diseño](docs/DESIGN_SYSTEM.md)
 - [Decisiones técnicas](docs/DECISIONS.md)
 - [Roadmap](docs/ROADMAP.md)
+- [Plan de atletas y ranking interno](docs/ATHLETES_AND_RANKING.md)
 - [Cómo contribuir](CONTRIBUTING.md)
 
 ## Seguridad y privacidad

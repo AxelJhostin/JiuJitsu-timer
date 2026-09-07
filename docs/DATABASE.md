@@ -86,6 +86,8 @@ requiera.
 
 ## Evolución futura
 
-Tablas futuras posibles: `tournaments`, `mats`, `rulesets` y `brackets`. No se
-incluyen ahora para evitar modelar funciones que todavía no forman parte del
-producto.
+Tablas futuras previstas: `athletes`, `athlete_belt_history`,
+`match_participants`, `ranking_entries`, `accounts`, `tournaments`, `mats`,
+`rulesets` y `brackets`. El diseño de atletas y ranking está documentado en
+[Atletas y ranking interno](ATHLETES_AND_RANKING.md). No se incluyen ahora para
+evitar modelar funciones que todavía no forman parte del producto actual.

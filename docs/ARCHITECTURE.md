@@ -108,6 +108,8 @@ el identificador del combate.
 - Los reglamentos implementan una interfaz común y se identifican por versión.
 - El almacenamiento se accede mediante repositorios intercambiables.
 - Los eventos conservan la cronología necesaria para auditoría y tiempo real.
+- Atletas, historial de cintas y ajustes auditables de ranking se agregarán en
+  tablas relacionadas sin reemplazar las instantáneas de nombres en `matches`.
 - Las entidades de torneo y bracket podrán agregarse sin alterar el marcador.
 - Los estilos dependen de tokens semánticos, no de colores pegados a cada vista.
 

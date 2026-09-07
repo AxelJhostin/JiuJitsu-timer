@@ -18,14 +18,25 @@
 - Recuperación de combate activo desde otro dispositivo.
 - Estados de sincronización y reconexión.
 
-## Hito 3 — Operación de torneo
+## Hito 3 — Academia: atletas y ranking interno
+
+- Fichas de atletas con estado activo y cinta actual.
+- Historial de ascensos y cinta instantánea por combate.
+- Elección de atleta o invitado al preparar un combate.
+- Marca de combate válido para ranking.
+- Academy Rating por victoria, ponderado por diferencia de cinta.
+- Filtros de ranking por cinta y modalidad Gi/No-Gi.
+- Perfil de atleta con récord e historial.
+- Diseño de cuentas y roles, sin almacenar contraseñas.
+
+## Hito 4 — Operación de torneo
 
 - Torneos y múltiples tatamis.
 - Asignación de combates a mesa.
 - Roles de organizador, árbitro y pantalla pública.
 - Resultados por categoría.
 
-## Hito 4 — Llaves
+## Hito 5 — Llaves
 
 - Brackets de eliminación.
 - Avance automático del ganador.

@@ -51,6 +51,14 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 - Autenticación multiusuario y permisos por torneo.
 - Sincronización en tiempo real entre varios dispositivos.
 
+## Evolución interna planificada
+
+La siguiente expansión prevista es el módulo de atletas y ranking para una
+academia. Tendrá fichas de atletas, historial de cintas, perfiles personales y
+Academy Rating filtrable por cinta y modalidad. El diseño, las reglas y el orden
+de fases están en [Atletas y ranking interno](ATHLETES_AND_RANKING.md). No forma
+parte todavía del marcador actual.
+
 ## Flujo principal
 
 ```text

@@ -7,6 +7,8 @@
 3. Si cambia el comportamiento del producto, actualiza `docs/PRODUCT.md`.
 4. Si cambia el esquema, genera y revisa una migración Drizzle.
 5. Ejecuta `npm run check` y `npm run build` antes de entregar.
+6. Para atletas o ranking, respeta el plan y las reglas versionadas de
+   `docs/ATHLETES_AND_RANKING.md`; no ajustes puntajes directamente en componentes.
 
 ## Convenciones
 
