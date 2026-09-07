@@ -53,12 +53,27 @@ que esas rutas se empaqueten como funciones de su plataforma. El adaptador de
 Node standalone queda reservado para una futura publicación en infraestructura
 propia.
 
-## ADR-008: Registro de atletas y Academy Rating
+## ADR-008: Academia, atletas y Academy Rating
+
+**Estado:** planificada y aprobada para diseño; pendiente de implementación.
+
+La próxima expansión interna introduce academias como unidad de aislamiento. Un
+profesor será dueño de su academia e invitará alumnos mediante códigos
+revocables; las cuentas personales usarán un proveedor externo, no contraseñas
+propias. Las fichas de atleta continúan separadas de las cuentas y los invitados
+manuales siguen siendo válidos fuera del ranking.
+
+El ranking será privado por academia, auditable por combate, filtrable por cinta
+y modalidad, y ponderará una victoria según la diferencia de cinta. No habrá
+bonus por método de victoria. La especificación completa está en el [Plan de
+academia, atletas, cuentas y ranking interno](ATHLETES_AND_RANKING.md).
+
+## ADR-009: Autorización centrada en membresías
 
 **Estado:** planificada.
 
-La próxima expansión interna separará las fichas de atletas de sus futuras
-cuentas de acceso. El ranking será auditado por combate, filtrable por cinta y
-modalidad, y ponderará una victoria según la diferencia de cinta. No habrá bonus
-por método de victoria. La especificación completa está en
-[Atletas y ranking interno](ATHLETES_AND_RANKING.md).
+Los roles vivirán en una membresía entre cuenta y academia. Toda ruta interna
+resolverá sesión, membresía activa y permiso en servidor antes de consultar
+Drizzle. Las tablas de academia llevarán `academy_id` o una relación verificable
+hacia él, evitando que un identificador enviado por cliente permita acceso
+cruzado.

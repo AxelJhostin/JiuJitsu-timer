@@ -108,10 +108,18 @@ el identificador del combate.
 - Los reglamentos implementan una interfaz común y se identifican por versión.
 - El almacenamiento se accede mediante repositorios intercambiables.
 - Los eventos conservan la cronología necesaria para auditoría y tiempo real.
+- La expansión de academia añadirá autenticación en servidor, membresías por
+  academia y autorización por rol. Ninguna ruta confiará en un `academyId`
+  enviado por el navegador.
 - Atletas, historial de cintas y ajustes auditables de ranking se agregarán en
   tablas relacionadas sin reemplazar las instantáneas de nombres en `matches`.
+- Los cálculos de ranking vivirán en servicios de dominio puros y sus entradas
+  versionadas se regenerarán desde un combate corregido, sin alterar el acta.
 - Las entidades de torneo y bracket podrán agregarse sin alterar el marcador.
 - Los estilos dependen de tokens semánticos, no de colores pegados a cada vista.
+
+El diseño por fases, las entidades y los límites de acceso están en el [Plan de
+academia, atletas, cuentas y ranking interno](ATHLETES_AND_RANKING.md).
 
 ## Estrategia de pruebas
 

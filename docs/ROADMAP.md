@@ -18,16 +18,16 @@
 - Recuperación de combate activo desde otro dispositivo.
 - Estados de sincronización y reconexión.
 
-## Hito 3 — Academia: atletas y ranking interno
+## Hito 3 — Academia: cuentas, atletas y ranking interno
 
-- Fichas de atletas con estado activo y cinta actual.
-- Historial de ascensos y cinta instantánea por combate.
-- Elección de atleta o invitado al preparar un combate.
-- Marca de combate válido para ranking.
-- Academy Rating por victoria, ponderado por diferencia de cinta.
-- Filtros de ranking por cinta y modalidad Gi/No-Gi.
-- Perfil de atleta con récord e historial.
-- Diseño de cuentas y roles, sin almacenar contraseñas.
+Este hito se implementará por fases: base segura y reglas, academia/roles,
+invitaciones, atletas/cintas, combates vinculados, ranking/perfil y piloto.
+La especificación canónica está en el [Plan de academia, atletas, cuentas y
+ranking interno](ATHLETES_AND_RANKING.md).
+
+El ranking será privado por academia, no premiará el método de victoria y
+ponderará únicamente la diferencia de cinta del rival. Los invitados manuales
+se conservan, pero no aparecen en la clasificación.
 
 ## Hito 4 — Operación de torneo
 

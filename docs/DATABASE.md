@@ -84,10 +84,16 @@ competidores siguen siendo datos personales: deben recolectarse únicamente para
 la operación del torneo y eliminarse cuando la política del organizador lo
 requiera.
 
-## Evolución futura
+## Evolución futura: academia y ranking
 
-Tablas futuras previstas: `athletes`, `athlete_belt_history`,
-`match_participants`, `ranking_entries`, `accounts`, `tournaments`, `mats`,
-`rulesets` y `brackets`. El diseño de atletas y ranking está documentado en
-[Atletas y ranking interno](ATHLETES_AND_RANKING.md). No se incluyen ahora para
-evitar modelar funciones que todavía no forman parte del producto actual.
+La próxima expansión introduce primero `academies`, `accounts`,
+`academy_memberships` y `academy_invites`, y después `athletes`,
+`athlete_belt_history`, `match_participants` y `ranking_entries`. `matches`
+recibirá una referencia de academia durante la transición. Las entradas de
+ranking serán derivadas, inmutables y versionadas por regla.
+
+Todo dato interno se consultará con `academy_id` y una membresía validada en el
+servidor. Los códigos de invitación se almacenarán como hashes, nunca como texto
+plano ni contraseñas. El diseño completo está en el [Plan de academia, atletas,
+cuentas y ranking interno](ATHLETES_AND_RANKING.md). No se incluyen todavía para
+evitar modelar funciones que aún no son parte del producto actual.

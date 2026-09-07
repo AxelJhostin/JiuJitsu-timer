@@ -53,11 +53,14 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 
 ## Evolución interna planificada
 
-La siguiente expansión prevista es el módulo de atletas y ranking para una
-academia. Tendrá fichas de atletas, historial de cintas, perfiles personales y
-Academy Rating filtrable por cinta y modalidad. El diseño, las reglas y el orden
-de fases están en [Atletas y ranking interno](ATHLETES_AND_RANKING.md). No forma
-parte todavía del marcador actual.
+La siguiente expansión convierte Tatami Score en una herramienta interna de
+academia: un profesor crea su academia, invita alumnos con códigos revocables y
+cada alumno posee una cuenta personal. Tendrá fichas de atleta, historial de
+cintas, perfiles personales y Academy Rating privado filtrable por cinta y
+modalidad. No habrá fotos ni archivos en esta etapa. El diseño, las decisiones,
+el modelo de datos y las fases están en el [Plan de academia, atletas, cuentas y
+ranking interno](ATHLETES_AND_RANKING.md). No forma parte todavía del marcador
+actual.
 
 ## Flujo principal
 
