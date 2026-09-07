@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight, Clock3, Monitor, Plus, Trophy, Zap } from "lucide-react";
 import { finishMethodLabels, type MatchState } from "@/domain/match";
 import { loadActiveMatch, loadMatchHistory } from "@/lib/storage";
+import { InstallAppButton } from "@/components/app/InstallAppButton";
 
 export function HomeDashboard() {
   const [lastMatch, setLastMatch] = React.useState<MatchState | null>(null);
@@ -47,6 +48,7 @@ export function HomeDashboard() {
           </span>
           <ArrowRight aria-hidden="true" />
         </a>
+        <InstallAppButton />
         <a className="history-link" href="/historial">
           <Clock3 aria-hidden="true" /> Ver historial de combates
           <span>{historyCount} guardados</span>

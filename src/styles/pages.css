@@ -142,6 +142,20 @@
   color: var(--color-advantage);
   font-size: 10px;
 }
+.pwa-install {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--color-primary);
+}
+.pwa-install svg {
+  width: 18px;
+}
 
 .history-link {
   position: relative;

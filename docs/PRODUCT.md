@@ -37,6 +37,8 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 - Señal sonora al iniciar, cuenta regresiva de los últimos diez segundos y
   alarma final con vibración cuando el dispositivo la admite.
 - Modo de proyección sin controles operativos.
+- Instalación como aplicación web en celular o computadora, con acceso básico
+  a contenido visitado sin conexión.
 - Persistencia local y sincronización con Neon cuando esté configurado.
 
 ### Fuera del primer alcance

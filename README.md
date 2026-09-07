@@ -110,6 +110,15 @@ Sin `DATABASE_URL`, la interfaz sigue funcionando con almacenamiento local. La
 variable `DATABASE_URL_UNPOOLED` se usa exclusivamente desde una máquina segura
 para ejecutar migraciones con Drizzle, nunca durante el despliegue.
 
+## Instalar en el celular o computadora
+
+Tatami Score es una aplicación web instalable (PWA). Tras visitar el sitio una
+vez con conexión, Chrome y Edge mostrarán **Instalar aplicación** cuando esté
+disponible. En iPhone o iPad usa Compartir → **Agregar a pantalla de inicio**.
+La aplicación instalada se abre en su propia ventana y conserva los datos
+locales del dispositivo; Neon seguirá sincronizando al finalizar el combate si
+hay conexión.
+
 ## Comandos
 
 | Comando                | Uso                                            |

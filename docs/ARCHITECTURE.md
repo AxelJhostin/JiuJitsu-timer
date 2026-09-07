@@ -125,3 +125,11 @@ el marcador no dependa de archivos multimedia. El operador recibe un tono al
 iniciar o reanudar, señales y vibración breve durante los últimos diez segundos,
 y una alarma con vibración al finalizar. Si el dispositivo o navegador no
 permite audio/vibración, el cronómetro continúa funcionando sin bloquearse.
+
+## Aplicación instalable
+
+La PWA se compone de `public/manifest.webmanifest`, `public/sw.js` y el registro
+`PwaRegistration.astro`. El service worker conserva el inicio, recursos ya
+visitados y páginas navegadas para ofrecer una apertura básica sin conexión. Las
+rutas `/api/*` nunca se almacenan en caché: Neon sigue siendo la fuente remota
+de datos cuando existe conectividad.

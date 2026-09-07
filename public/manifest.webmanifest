@@ -1,0 +1,18 @@
+{
+  "name": "Tatami Score",
+  "short_name": "Tatami Score",
+  "description": "Marcador claro y confiable para combates de Brazilian Jiu-Jitsu.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b1118",
+  "theme_color": "#0b1118",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

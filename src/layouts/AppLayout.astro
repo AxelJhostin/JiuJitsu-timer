@@ -1,6 +1,7 @@
 ---
 import AppHeader from "@/components/app/AppHeader.astro";
 import AppNavigation from "@/components/app/AppNavigation.astro";
+import PwaRegistration from "@/components/app/PwaRegistration.astro";
 import "@/styles/tokens.css";
 import "@/styles/base.css";
 import "@/styles/components.css";
@@ -33,6 +34,8 @@ const {
     <meta name="theme-color" content="#0b1118" />
     <meta name="description" content={description} />
     <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/logo.svg" />
     <title>{title} · Tatami Score</title>
   </head>
   <body>
@@ -41,5 +44,6 @@ const {
       <slot />
     </main>
     {!hideNavigation && <AppNavigation />}
+    <PwaRegistration />
   </body>
 </html>

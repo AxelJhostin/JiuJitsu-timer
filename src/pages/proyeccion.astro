@@ -1,5 +1,6 @@
 ---
 import { ProjectionBoard } from "@/components/match/ProjectionBoard";
+import PwaRegistration from "@/components/app/PwaRegistration.astro";
 import "@/styles/tokens.css";
 import "@/styles/base.css";
 import "@/styles/components.css";
@@ -12,9 +13,12 @@ import "@/styles/scoreboard.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0b1118" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/logo.svg" />
     <title>Proyección · Tatami Score</title>
   </head>
   <body class="projection-page">
     <ProjectionBoard client:load />
+    <PwaRegistration />
   </body>
 </html>
