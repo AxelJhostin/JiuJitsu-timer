@@ -17,6 +17,7 @@ import {
   saveActiveMatch,
   syncMatch,
 } from "@/lib/storage";
+import { signalTimer } from "@/lib/timer-feedback";
 import { ActionSheet } from "./ActionSheet";
 import { CompetitorScoreCard } from "./CompetitorScoreCard";
 import { FinishMatchDialog } from "./FinishMatchDialog";
@@ -33,6 +34,7 @@ export function MatchController() {
     "local" | "syncing" | "synced"
   >("local");
   const endAt = React.useRef<number | null>(null);
+  const lastFeedbackSecond = React.useRef<number | null>(null);
 
   React.useEffect(() => {
     setMatch(loadActiveMatch());
@@ -76,10 +78,12 @@ export function MatchController() {
   React.useEffect(() => {
     if (!match || match.status !== "running") {
       endAt.current = null;
+      lastFeedbackSecond.current = null;
       return;
     }
 
     endAt.current = Date.now() + match.remainingSeconds * 1000;
+    lastFeedbackSecond.current = match.remainingSeconds;
     const interval = window.setInterval(() => {
       if (!endAt.current) return;
       const seconds = Math.max(
@@ -91,8 +95,17 @@ export function MatchController() {
           ? matchReducer(current, { type: "SET_REMAINING", seconds })
           : current,
       );
+      if (
+        seconds <= 10 &&
+        seconds > 0 &&
+        seconds !== lastFeedbackSecond.current
+      ) {
+        signalTimer("countdown");
+        lastFeedbackSecond.current = seconds;
+      }
       if (seconds === 0) {
         window.clearInterval(interval);
+        signalTimer("finish");
         setFinishOpen(true);
       }
     }, 250);
@@ -123,10 +136,14 @@ export function MatchController() {
 
   const toggleTimer = () => {
     if (!match) return;
-    if (match.status === "ready") send({ type: "START" });
-    else if (match.status === "running") send({ type: "PAUSE" });
-    else if (match.status === "paused" && match.remainingSeconds > 0)
+    if (match.status === "ready") {
+      signalTimer("start");
+      send({ type: "START" });
+    } else if (match.status === "running") send({ type: "PAUSE" });
+    else if (match.status === "paused" && match.remainingSeconds > 0) {
+      signalTimer("start");
       send({ type: "RESUME" });
+    }
   };
 
   const finish = async (result: MatchResult) => {

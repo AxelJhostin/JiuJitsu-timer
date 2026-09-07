@@ -91,6 +91,7 @@ adaptador sin cambiar los componentes.
 | `/marcador`         | Operación del combate activo.        |
 | `/resumen`          | Último resultado.                    |
 | `/historial`        | Resultados guardados.                |
+| `/historial/[id]`   | Acta y cronología de un combate.     |
 | `/proyeccion`       | Marcador público de pantalla grande. |
 | `/reglas`           | Reglamento y tiempos configurados.   |
 | `/api/matches`      | Crear/listar combates.               |
@@ -110,3 +111,11 @@ adaptador sin cambiar los componentes.
 - Componentes: acciones críticas y accesibilidad.
 - Integración: endpoints y repositorios sobre una rama de Neon.
 - E2E futura: crear, puntuar, pausar, deshacer y finalizar un combate.
+
+## Señales del cronómetro
+
+`src/lib/timer-feedback.ts` encapsula audio y vibración del navegador para que
+el marcador no dependa de archivos multimedia. El operador recibe un tono al
+iniciar o reanudar, señales y vibración breve durante los últimos diez segundos,
+y una alarma con vibración al finalizar. Si el dispositivo o navegador no
+permite audio/vibración, el cronómetro continúa funcionando sin bloquearse.

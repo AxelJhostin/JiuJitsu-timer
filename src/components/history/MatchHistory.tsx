@@ -65,40 +65,46 @@ export function MatchHistory() {
       ) : (
         <div className="history-list">
           {filtered.map((match) => (
-            <article className="history-card panel" key={match.id}>
-              <header>
-                <span>{match.tournament}</span>
-                <time>
-                  {new Date(match.createdAt).toLocaleDateString("es-EC")}
-                </time>
-              </header>
-              <div className="history-card__matchup">
-                <div className="history-card__competitor history-card__competitor--blue">
-                  <small>Azul</small>
-                  <strong>{match.blue.name}</strong>
-                  <span>{match.blue.academy}</span>
+            <a
+              className="history-card-link"
+              href={`/historial/${match.id}`}
+              key={match.id}
+            >
+              <article className="history-card panel">
+                <header>
+                  <span>{match.tournament}</span>
+                  <time>
+                    {new Date(match.createdAt).toLocaleDateString("es-EC")}
+                  </time>
+                </header>
+                <div className="history-card__matchup">
+                  <div className="history-card__competitor history-card__competitor--blue">
+                    <small>Azul</small>
+                    <strong>{match.blue.name}</strong>
+                    <span>{match.blue.academy}</span>
+                  </div>
+                  <div className="history-card__score">
+                    <strong>
+                      {match.blueScore.points} — {match.redScore.points}
+                    </strong>
+                    <small>
+                      {match.result
+                        ? finishMethodLabels[match.result.method]
+                        : "Pendiente"}
+                    </small>
+                  </div>
+                  <div className="history-card__competitor history-card__competitor--red">
+                    <small>Rojo</small>
+                    <strong>{match.red.name}</strong>
+                    <span>{match.red.academy}</span>
+                  </div>
                 </div>
-                <div className="history-card__score">
-                  <strong>
-                    {match.blueScore.points} — {match.redScore.points}
-                  </strong>
-                  <small>
-                    {match.result
-                      ? finishMethodLabels[match.result.method]
-                      : "Pendiente"}
-                  </small>
-                </div>
-                <div className="history-card__competitor history-card__competitor--red">
-                  <small>Rojo</small>
-                  <strong>{match.red.name}</strong>
-                  <span>{match.red.academy}</span>
-                </div>
-              </div>
-              <footer>
-                {match.division}
-                <span>{match.mat}</span>
-              </footer>
-            </article>
+                <footer>
+                  <span>{match.division}</span>
+                  <span>Ver acta · {match.mat || "Sin asignar"}</span>
+                </footer>
+              </article>
+            </a>
           ))}
         </div>
       )}

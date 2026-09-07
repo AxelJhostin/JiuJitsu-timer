@@ -31,7 +31,9 @@ una pantalla grande, con historial persistente y reglas desacopladas.
 - Historial reversible de acciones.
 - Final por puntos, sumisión, descalificación, abandono, lesión o decisión arbitral.
 - Resumen y cronología del combate.
-- Historial de combates.
+- Historial de combates con acceso al acta y la cronología de cada lucha.
+- Señal sonora al iniciar, cuenta regresiva de los últimos diez segundos y
+  alarma final con vibración cuando el dispositivo la admite.
 - Modo de proyección sin controles operativos.
 - Persistencia local y sincronización con Neon cuando esté configurado.
 

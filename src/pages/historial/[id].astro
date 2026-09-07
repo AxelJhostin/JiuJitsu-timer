@@ -1,0 +1,10 @@
+---
+import { MatchHistoryDetail } from "@/components/history/MatchHistoryDetail";
+import AppLayout from "@/layouts/AppLayout.astro";
+
+const { id = "" } = Astro.params;
+---
+
+<AppLayout title="Acta de combate" context="Historial">
+  <MatchHistoryDetail client:load matchId={id} />
+</AppLayout>

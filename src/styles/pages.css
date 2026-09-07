@@ -778,6 +778,15 @@
 .history-card {
   overflow: hidden;
 }
+.history-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.history-card-link:focus-visible .history-card,
+.history-card-link:hover .history-card {
+  border-color: var(--color-primary);
+}
 .history-card header,
 .history-card footer {
   display: flex;
