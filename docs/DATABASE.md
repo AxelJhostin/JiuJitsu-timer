@@ -57,6 +57,14 @@ el pool transaccional no garantiza.
 6. Prueba la migración en una rama de Neon.
 7. Aplica con `npm run db:migrate`.
 
+### Variables en Vercel
+
+Para que la sincronización funcione en los despliegues, registra solamente
+`DATABASE_URL` como variable de entorno de Vercel, tanto en Production como en
+Preview. Usa la URL agrupada (`-pooler`) para esta variable. La URL directa
+`DATABASE_URL_UNPOOLED` no se configura en Vercel: se reserva para ejecutar
+migraciones desde un entorno seguro.
+
 ## Flujo por ramas
 
 Cada rama Git que cambie el esquema debería usar una rama equivalente de Neon:

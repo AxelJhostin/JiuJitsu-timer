@@ -92,6 +92,24 @@ La aplicación funciona sin `DATABASE_URL`: en ese modo el historial se guarda
 solo en el navegador. Para persistencia compartida, configura Neon según
 [Base de datos](docs/DATABASE.md).
 
+## Despliegue en Vercel
+
+Tatami Score utiliza renderizado en servidor y endpoints para sincronizar
+combates con Neon. El adaptador `@astrojs/vercel` empaqueta las páginas y la
+API para Vercel; no configures un directorio de salida manual.
+
+1. Importa el repositorio en Vercel con la raíz del proyecto como **Root
+   Directory** y Astro como framework.
+2. Conserva `npm run build` como comando de compilación y deja vacío **Output
+   Directory**.
+3. Define `DATABASE_URL` para los entornos Production y Preview si deseas
+   persistencia remota. No subas el archivo `.env` ni `DATABASE_URL_UNPOOLED`.
+4. Haz un nuevo despliegue después de subir los cambios.
+
+Sin `DATABASE_URL`, la interfaz sigue funcionando con almacenamiento local. La
+variable `DATABASE_URL_UNPOOLED` se usa exclusivamente desde una máquina segura
+para ejecutar migraciones con Drizzle, nunca durante el despliegue.
+
 ## Comandos
 
 | Comando                | Uso                                            |

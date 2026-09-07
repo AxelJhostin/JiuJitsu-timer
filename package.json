@@ -16,8 +16,8 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@astrojs/node": "^11.1.5",
     "@astrojs/react": "^6.0.5",
+    "@astrojs/vercel": "^11.0.10",
     "@neondatabase/serverless": "^1.1.0",
     "astro": "^7.3.1",
     "drizzle-orm": "^0.45.2",

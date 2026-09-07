@@ -6,6 +6,10 @@ Tatami Score utiliza Astro como marco de aplicación y React únicamente para la
 superficies con interacción continua. Esto mantiene las páginas simples ligeras
 y concentra la complejidad en el marcador.
 
+En Vercel, Astro usa el adaptador `@astrojs/vercel`. Este transforma las rutas
+renderizadas en servidor y los endpoints `/api/*` en funciones de Vercel. No se
+usa un servidor Node standalone ni se publica `dist/` como un sitio estático.
+
 ```text
 Navegador
   ├─ Páginas Astro renderizadas en servidor

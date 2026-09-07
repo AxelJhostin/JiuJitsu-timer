@@ -42,3 +42,13 @@ La lectura es rápida y la cronología sigue disponible para auditoría.
 
 La primera versión valida el producto en operación local. Antes de exponer
 escrituras públicamente se añadirá autenticación y autorización por torneo.
+
+## ADR-007: Adaptador de Astro para Vercel
+
+**Estado:** aceptada.
+
+La aplicación tiene páginas renderizadas en servidor y endpoints para Neon.
+Por ello se usa `@astrojs/vercel` en lugar de `@astrojs/node`: Vercel requiere
+que esas rutas se empaqueten como funciones de su plataforma. El adaptador de
+Node standalone queda reservado para una futura publicación en infraestructura
+propia.
